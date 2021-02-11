@@ -5,12 +5,24 @@ using UnityEngine;
 public class KnifeInteraction : MonoBehaviour
 {
     public ThrowingKnife knife;
-    public float throwSpeed = 10;
+    public float throwSpeed = 1;
+    public GameObject character;
     public int knives = 0;
     private Renderer rend;
+    private Camera cam;
 
     void Start()
+
     {
+        //cam = Camera.main;
+        //if (gameObject.layer == 8 && gameObject.name != "knifeParent")
+        //{
+        //    //Vector3 worldMousePosition = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane));
+        //    //Vector3 direction = worldMousePosition - character.transform.position;
+        //    //Debug.Log(direction);
+        //    gameObject.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(1, 0, 0) * throwSpeed, ForceMode.Impulse);
+        //}
+        gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         rend = GetComponent<Renderer>();
     }
 
@@ -35,7 +47,7 @@ public class KnifeInteraction : MonoBehaviour
         knife.knives++;
         gameObject.SetActive(false);
     }
-    
+
     void OnMouseOver()
     {
         rend.material.color = Color.blue;
@@ -46,5 +58,16 @@ public class KnifeInteraction : MonoBehaviour
         }
 
     }
-}
 
+    void OnCollisionEnter(Collision coll)
+    {
+        //if (coll.gameObject.tag != "throwPlane")
+        //{
+            Debug.Log("Collision object: " + coll.gameObject.name);
+            gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
+            gameObject.GetComponent<Rigidbody>().useGravity = false;
+        //}
+    }
+}
