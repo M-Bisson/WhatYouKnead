@@ -23,7 +23,7 @@ public class KnifeInteraction : MonoBehaviour
         //    gameObject.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(1, 0, 0) * throwSpeed, ForceMode.Impulse);
         //}
         gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-        rend = GetComponent<Renderer>();
+        //rend = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -50,7 +50,7 @@ public class KnifeInteraction : MonoBehaviour
 
     void OnMouseOver()
     {
-        rend.material.color = Color.blue;
+        transform.Find("Blade").GetComponent<Renderer>().material.color = Color.blue;
         //if you click and are in the plane pick the knife up
         if (Input.GetMouseButtonDown(0) && gameObject.tag == "knife")
         {

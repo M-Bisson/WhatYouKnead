@@ -29,7 +29,7 @@ public class ThrowingKnife : MonoBehaviour
                 GameObject projectile = Instantiate(knifeTemplate, knifeSpawnPoint.transform.position, Quaternion.identity) as GameObject;
                 // turn the projectile to hit.point
                 projectile.transform.LookAt(hit.point);
-                projectile.GetComponent<MeshRenderer>().enabled = true;
+                //projectile.GetComponent<MeshRenderer>().enabled = true;
                 // accelerate it
                 projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * throwSpeed, ForceMode.Impulse);
             }
