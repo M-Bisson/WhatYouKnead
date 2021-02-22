@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class LoadForestStage : MonoBehaviour
 {
-    void OnTriggerEnter(Collider c)
+    public GameObject character;
+
+    public void OnTriggerEnter(Collider c)
     {
         if(c.tag == "Player")
         {
+            DontDestroyOnLoad(character);
             SceneManager.LoadScene("Forest");
         }
     }
