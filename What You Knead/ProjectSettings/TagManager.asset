@@ -6,6 +6,7 @@ TagManager:
   tags:
   - knife
   - throwPlane
+  - Terrain
   layers:
   - Default
   - TransparentFX
