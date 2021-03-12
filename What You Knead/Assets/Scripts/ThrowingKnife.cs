@@ -18,7 +18,7 @@ public class ThrowingKnife : MonoBehaviour
         //if you have a knife and right click, throw it
         if (Input.GetMouseButtonDown(1) && knives > 0)
         {
-            Debug.Log("Throwing Knife");
+            //Debug.Log("Throwing Knife");
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))

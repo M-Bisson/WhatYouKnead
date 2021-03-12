@@ -43,7 +43,7 @@ public class KnifeInteraction : MonoBehaviour
 
     void pickUpKnife()
     {
-        Debug.Log("Picked up Knife");
+        //Debug.Log("Picked up Knife");
         knife.knives++;
         gameObject.SetActive(false);
     }
