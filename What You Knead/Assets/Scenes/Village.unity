@@ -29377,6 +29377,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: House_2c_1b (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5282371015822764440, guid: a243ca257fea1104a86a78275d903e27,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282371015822764441, guid: a243ca257fea1104a86a78275d903e27,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 5282371016562559205, guid: a243ca257fea1104a86a78275d903e27,
         type: 3}
       propertyPath: m_Size.z

@@ -16,7 +16,7 @@ public class Door : MonoBehaviour //https://forum.unity.com/threads/door-open-cl
     //public GameObject parent;
 
     // this is the movement rate (if movement is applied to the door)
-    public float moveSpeed = 1.2f;
+    public float moveSpeed = 0.12f;
     // this is the rotation rate (if rotation is applied to the door)
     public float rotationSpeed = 70;
 
