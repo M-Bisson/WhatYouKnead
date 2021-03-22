@@ -45,8 +45,8 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 578, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 579, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
   controlID: 16
 --- !u!114 &3
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 427
     height: 731
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -494,9 +494,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 40.908, y: 5.2714996, z: 35.107998}
+    m_Target: {x: 10.188492, y: 5.012488, z: 10.160873}
     speed: 2
-    m_Value: {x: 40.908, y: 5.2714996, z: 35.107998}
+    m_Value: {x: 10.188492, y: 5.012488, z: 10.160873}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -542,13 +542,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.016581798, y: 0.98079634, z: -0.09622831, w: 0.16907685}
+    m_Target: {x: 0.037975322, y: 0.9291222, z: -0.09960641, w: 0.35419556}
     speed: 2
-    m_Value: {x: 0.016581109, y: 0.9807555, z: -0.09622431, w: 0.16906981}
+    m_Value: {x: 0.037973687, y: 0.9290822, z: -0.099602126, w: 0.35418034}
   m_Size:
-    m_Target: 0.7526306
+    m_Target: 5.211236
     speed: 2
-    m_Value: 0.7526306
+    m_Value: 5.211236
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -612,21 +612,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Models
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Models
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\2020-21\SPRING 2021\CS 4455 VGD\Group Project\GitRepo\WhatYouKnead\What
     You Knead
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 46}
-    m_SelectedIDs: ba5b0000
-    m_LastClickedID: 23482
-    m_ExpandedIDs: 00000000925b0000945b0000965b0000985b00009a5b00009c5b00009e5b0000a05b000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 74460000
+    m_LastClickedID: 18036
+    m_ExpandedIDs: 000000004446000046460000484600004a4600004c4600004e460000504600005246000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -654,7 +654,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000925b0000945b0000965b0000985b00009a5b00009c5b00009e5b0000a05b0000
+    m_ExpandedIDs: 000000004446000046460000484600004a4600004c4600004e4600005046000052460000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -706,7 +706,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 85}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 200
@@ -777,20 +777,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7c4ffdff
-      m_LastClickedID: -176260
-      m_ExpandedIDs: 1c2dfeff5e3cffff9078ffff4cfaffff34770000707a0000127b0000967c000088390800863a0800883b0800643d08005c3e08005e3f0800
+      m_SelectedIDs: 0e840100
+      m_LastClickedID: 99342
+      m_ExpandedIDs: e627ffffceb6ffff68fbffff403c0000de5f00000e62000066620000d2630000c867000016750100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: bee
-        m_OriginalName: bee
+        m_Name: GrasshopperParent
+        m_OriginalName: GrasshopperParent
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -134622
+        m_UserData: 96354
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0

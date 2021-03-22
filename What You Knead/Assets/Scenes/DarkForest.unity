@@ -10266,11 +10266,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 726297616}
     m_Modifications:
+    - target: {fileID: -6950956063716933387, guid: d1dc451dec7164540aea1620472d80b9,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 294058508}
+    - target: {fileID: -6188513105808460417, guid: d1dc451dec7164540aea1620472d80b9,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -5396986454382007801, guid: d1dc451dec7164540aea1620472d80b9,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: f205afe4e1b40da48a05cb743cacb9cb, type: 2}
+    - target: {fileID: -4250965338978132052, guid: d1dc451dec7164540aea1620472d80b9,
+        type: 3}
+      propertyPath: knife
+      value: 
+      objectReference: {fileID: 1959801425}
     - target: {fileID: 1225515089020659560, guid: d1dc451dec7164540aea1620472d80b9,
         type: 3}
       propertyPath: agent
@@ -15185,6 +15200,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &294058508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294058505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e7efacac6f99cc47a1b3ee4fc020850, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: 0
 --- !u!4 &294058509 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 19d6d652adb07dc40a399aff5ffbc137,
@@ -30617,11 +30645,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1497349706}
     m_Modifications:
+    - target: {fileID: -6950956063716933387, guid: d1dc451dec7164540aea1620472d80b9,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 294058508}
+    - target: {fileID: -6188513105808460417, guid: d1dc451dec7164540aea1620472d80b9,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -5396986454382007801, guid: d1dc451dec7164540aea1620472d80b9,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: f205afe4e1b40da48a05cb743cacb9cb, type: 2}
+    - target: {fileID: -4250965338978132052, guid: d1dc451dec7164540aea1620472d80b9,
+        type: 3}
+      propertyPath: knife
+      value: 
+      objectReference: {fileID: 1959801425}
     - target: {fileID: 1225515089020659560, guid: d1dc451dec7164540aea1620472d80b9,
         type: 3}
       propertyPath: agent
@@ -90433,11 +90476,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 953635184}
     m_Modifications:
+    - target: {fileID: -6950956063716933387, guid: d1dc451dec7164540aea1620472d80b9,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 294058508}
+    - target: {fileID: -6188513105808460417, guid: d1dc451dec7164540aea1620472d80b9,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -5396986454382007801, guid: d1dc451dec7164540aea1620472d80b9,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: f205afe4e1b40da48a05cb743cacb9cb, type: 2}
+    - target: {fileID: -4250965338978132052, guid: d1dc451dec7164540aea1620472d80b9,
+        type: 3}
+      propertyPath: knife
+      value: 
+      objectReference: {fileID: 1959801425}
     - target: {fileID: 1225515089020659560, guid: d1dc451dec7164540aea1620472d80b9,
         type: 3}
       propertyPath: agent
@@ -96126,11 +96184,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 921469158}
     m_Modifications:
+    - target: {fileID: -6950956063716933387, guid: d1dc451dec7164540aea1620472d80b9,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 294058508}
+    - target: {fileID: -6188513105808460417, guid: d1dc451dec7164540aea1620472d80b9,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -5396986454382007801, guid: d1dc451dec7164540aea1620472d80b9,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: f205afe4e1b40da48a05cb743cacb9cb, type: 2}
+    - target: {fileID: -4250965338978132052, guid: d1dc451dec7164540aea1620472d80b9,
+        type: 3}
+      propertyPath: knife
+      value: 
+      objectReference: {fileID: 1959801425}
     - target: {fileID: 1225515089020659560, guid: d1dc451dec7164540aea1620472d80b9,
         type: 3}
       propertyPath: agent
@@ -97262,7 +97335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e996cd277032b7840880ba8e888a6a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knives: 0
+  knives: 5
   throwSpeed: 10
   character: {fileID: 294058509}
   knifeTemplate: {fileID: 1072011469}
@@ -108135,11 +108208,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1092097393}
     m_Modifications:
+    - target: {fileID: -6950956063716933387, guid: d1dc451dec7164540aea1620472d80b9,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 294058508}
+    - target: {fileID: -6188513105808460417, guid: d1dc451dec7164540aea1620472d80b9,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -5396986454382007801, guid: d1dc451dec7164540aea1620472d80b9,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: f205afe4e1b40da48a05cb743cacb9cb, type: 2}
+    - target: {fileID: -4250965338978132052, guid: d1dc451dec7164540aea1620472d80b9,
+        type: 3}
+      propertyPath: knife
+      value: 
+      objectReference: {fileID: 1959801425}
     - target: {fileID: 1225515089020659560, guid: d1dc451dec7164540aea1620472d80b9,
         type: 3}
       propertyPath: agent
