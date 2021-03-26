@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; 
+using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class GameStarter : MonoBehaviour
 {
@@ -10,7 +11,13 @@ public class GameStarter : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name == "Village" || scene.name == "Menu")
         {
-            SceneManager.LoadScene("Village");
+            if (EventSystem.current.currentSelectedGameObject.name == "HowToPlay")
+            {
+                SceneManager.LoadScene("HowToPlay");
+            } else
+            {
+                SceneManager.LoadScene("Village");
+            }
         } else if (scene.name == "Forest")
         {
             SceneManager.LoadScene("Forest");
@@ -20,6 +27,10 @@ public class GameStarter : MonoBehaviour
         } else if (scene.name == "Field")
         {
             SceneManager.LoadScene("Field");
+        }
+        else if (scene.name == "HowToPlay")
+        {
+            SceneManager.LoadScene("Menu");
         }
     }
 }
