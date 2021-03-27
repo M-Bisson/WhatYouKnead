@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -16,7 +17,8 @@ public class Player : MonoBehaviour
     {
         if(lives <= 0)
         {
-            gameObject.SetActive(false);
+            SceneManager.LoadScene("Village");
+
         }
     }
 }
