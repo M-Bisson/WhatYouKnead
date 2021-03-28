@@ -120,6 +120,16 @@ Manifest:
 			MouseLockNone.cs
 			PauseMenuToggle.cs
 			SceneStart.cs
+	Morgan Powers: Modeling, Basic Animation
+		Assets:
+			bear.blend & .fbx (model only)
+			bee.blend & .fbx (model only)
+			beehive.fbx
+			chef-knife.fbx
+			honeycomb.fbx (model and animation)
+			strawberry.fbx
+		Script:
+			AnimateNearPlayer.cs
 			
 			
 
