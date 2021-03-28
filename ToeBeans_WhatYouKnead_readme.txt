@@ -1,6 +1,6 @@
 Start scene file: Menu.unity
 
-How to play: 
+How to play:
 Controls
 	- WASD to move the character, space to jump (not currently needed for gameplay)
 	- mouse direction & WASD to change look/movement direction
@@ -30,7 +30,7 @@ Requirements:
 	- All enemies use Unity NavMeshAgent and player interaction with the enemy is the only way for the player to advance or lose(restart) the game
 	- Interaction with the environment is required to advance (opening doors in village to collect knives)
 		- interactions will be enhanced to provide a much more engaging scene for each stage once 3D assets are completed
-	- Game feel: 
+	- Game feel:
 		- audio for each stage is planned, audio clips to be found and implemented soon
 		- environmental polish to be implemented once final key interactions are complete
 			- particle system of falling leaves for trees
@@ -46,7 +46,7 @@ Requirements:
 
 Known problem areas:
 	- Audio
-	- Player Camera 
+	- Player Camera
 	- Environment (stages somewhat empty)
 
 Manifest:
@@ -104,8 +104,8 @@ Manifest:
 			CameraRotation.cs
 			FollowMouse.cs
 
-	Anna Ho: Modeling for flower field assets. Creating/programming the Menu/HowToPlay/Pause UI. 
-		Assets: 
+	Anna Ho: Modeling for flower field assets. Creating/programming the Menu/HowToPlay/Pause UI.
+		Assets:
 			white_daisy.fbx
 			orange_daisy.prefab
 			pink_daisy.prefab
@@ -113,8 +113,8 @@ Manifest:
 			red_daisy.prefab
 			white_daisy.prefab
 			yellow_daisy.prefab
-		
-		Scripts: 
+
+		Scripts:
 			GameQuitter.cs
 			GameStarter.cs
 			MouseLockNone.cs
@@ -130,8 +130,18 @@ Manifest:
 			strawberry.fbx
 		Script:
 			AnimateNearPlayer.cs
-			
-			
+	Marissa Yun: Programming UI/game mechanics for pickup interaction, sprite creation for pickup UI prefabs, rotation fix for door prefab
+		Assets:
+			Knife.prefab
+			Wheat.prefab
+			Honeycomb.prefab
+			Berry.prefab
+			Village.unity (InventoryPanel)
+		Script:
+			Inventory.cs
+			Door.cs (rotation fix, not author)
+
+
 
 
 
