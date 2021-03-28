@@ -103,11 +103,25 @@ Manifest:
 			LoadVillageStage.cs
 			CameraRotation.cs
 			FollowMouse.cs
-			
-			
+
+	Anna Ho: Modeling for flower field assets. Creating/programming the Menu/HowToPlay/Pause UI. 
+		Assets: 
+			white_daisy.fbx
+			orange_daisy.prefab
+			pink_daisy.prefab
+			purple_daisy.prefab
+			red_daisy.prefab
+			white_daisy.prefab
+			yellow_daisy.prefab
 		
-
-
+		Scripts: 
+			GameQuitter.cs
+			GameStarter.cs
+			MouseLockNone.cs
+			PauseMenuToggle.cs
+			SceneStart.cs
+			
+			
 
 
 
