@@ -140,6 +140,24 @@ Manifest:
 		Script:
 			Inventory.cs
 			Door.cs (rotation fix, not author)
+	Jenny Zhou: Modeling, Basic Animation, NPC AI, Concept Art
+		Assets:
+			Models:
+				catPlayer.blend and fbx (not added to scenes yet)
+				npc_cat.blend and fbx (animation not added to scenes yet but is in the .blend)
+			Textures:
+				Box texture for NPC waypoints (not added to the scene yet)
+				2D texture for Player model's face (not added to the scene yet but in the .blend)
+				2D texture for NPC models' faces (not added to the scene yet but in the .blend)
+			Concept Art:
+				Character concept art
+				Forest concept art
+				Dark forest concept art
+		Script:
+			npcScript.cs
+
+
+
 
 
 
