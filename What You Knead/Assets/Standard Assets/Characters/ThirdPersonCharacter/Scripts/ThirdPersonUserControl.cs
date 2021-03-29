@@ -70,6 +70,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             // pass all parameters to the character control script
             m_Character.Move(m_Move, crouch, m_Jump);
             m_Jump = false;
+
+            // play audio
+            FindObjectOfType<AudioManager>().Play("GrassFootstep");
         }
     }
 }

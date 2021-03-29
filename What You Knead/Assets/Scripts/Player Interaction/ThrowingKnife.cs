@@ -43,6 +43,9 @@ public class ThrowingKnife : MonoBehaviour
             //Debug.Log(throwAlongThis);
             //cloneKnife.GetComponent<Rigidbody>().AddRelativeForce(throwAlongThis * throwSpeed, ForceMode.Impulse);
             knives -= 1;
+
+            // play audio
+            FindObjectOfType<AudioManager>().Play("KnifeThrow");
         }
 
     }

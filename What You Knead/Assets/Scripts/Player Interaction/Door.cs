@@ -44,6 +44,9 @@ public class Door : MonoBehaviour //https://forum.unity.com/threads/door-open-cl
         if (Input.GetMouseButtonDown(0))
         {
             isOpened = !isOpened;
+
+            // play audio
+            FindObjectOfType<AudioManager>().Play("OpenDoor");
         }
     }
 
