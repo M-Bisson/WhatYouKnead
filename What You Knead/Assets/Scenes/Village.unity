@@ -4316,8 +4316,8 @@ MonoBehaviour:
   inventoryIcons:
   - {fileID: 4090226204787596541, guid: a468c2de559ac4794b4b9af760025d5b, type: 3}
   - {fileID: 2487065547587126239, guid: 3ee2779a7a27f4019bbafaba42bc4add, type: 3}
-  - {fileID: 8223639751316348614, guid: a4a2616635f4f4d1cbba16caf1e9e92b, type: 3}
   - {fileID: 7136281517903369138, guid: 00e2b249b815a4bea9274301b7032deb, type: 3}
+  - {fileID: 8223639751316348614, guid: a4a2616635f4f4d1cbba16caf1e9e92b, type: 3}
   knife: {fileID: 1959801425}
 --- !u!4 &294058509 stripped
 Transform:

@@ -9,6 +9,7 @@ TagManager:
   - Terrain
   - border
   - grasshopper
+  - honeycomb
   layers:
   - Default
   - TransparentFX
