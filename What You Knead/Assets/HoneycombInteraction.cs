@@ -22,7 +22,10 @@ public class HoneycombInteraction : MonoBehaviour
 
     void OnMouseOver()
     {
-        transform.Find("HoneyComb.003").GetComponent<Renderer>().material.color = Color.blue;
+        if (gameObject.tag == "honeycomb")
+        {
+            transform.Find("HoneyComb.003").GetComponent<Renderer>().material.color = Color.blue;
+        }
         //if you click and are in the plane pick the honeycomb up
         if (Input.GetMouseButtonDown(0) && gameObject.tag == "honeycomb")
         {
