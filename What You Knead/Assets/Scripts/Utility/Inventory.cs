@@ -8,20 +8,46 @@ public class Inventory : MonoBehaviour
     public GameObject inventoryPanel;
     public GameObject[] inventoryIcons;
     public ThrowingKnife knife;
+    //public HoneycombInteraction honeycomb;
     private int knives = 0;
+    public int honeycombs = 0;
+    public bool hasHoneycomb = false;
 
-    private void Update()
+    private void Start()
     {
         GameObject i;
-        //ThrowingKnife knife = character.GetComponent<ThrowingKnife>();
-        //Debug.Log("knives: " + knife.knives);
-        if (knives != knife.knives && knife.knives == 1)
+
+        if (knives != knife.knives && knife.knives >= 1)
         {
             i = Instantiate(inventoryIcons[0]);
             i.transform.SetParent(inventoryPanel.transform);
             knives = knife.knives;
+
+            foreach (Transform child in inventoryPanel.transform)
+            {
+                //if item already in inventory
+                if (child.gameObject.tag == "knife")
+                {
+                    child.Find("Text").GetComponent<Text>().text = "" + knife.knives;
+                    knives = knife.knives;
+                    return;
+                }
+            }
         }
-        if (knives != knife.knives && knife.knives > 1)
+
+    }
+
+    private void Update()
+    {
+        GameObject i;
+
+        //if (knives != knife.knives && knife.knives == 1)
+        //{
+        //    i = Instantiate(inventoryIcons[0]);
+        //    i.transform.SetParent(inventoryPanel.transform);
+        //    knives = knife.knives;
+        //}
+        if (knives != knife.knives)
         {
             foreach (Transform child in inventoryPanel.transform)
             {
@@ -34,6 +60,26 @@ public class Inventory : MonoBehaviour
                 }
             }
         }
+
+        if (hasHoneycomb == false && honeycombs >= 1)
+        {
+            i = Instantiate(inventoryIcons[1]);
+            i.transform.SetParent(inventoryPanel.transform);
+            hasHoneycomb = true;
+        }
+        //if (honeycombs >= 1)
+        //{
+        //    foreach (Transform child in inventoryPanel.transform)
+        //    {
+        //        //if item already in inventory
+        //        if (child.gameObject.tag == "honeycomb")
+        //        {
+        //            child.Find("Text").GetComponent<Text>().text = "" + honeycombs;
+        //            //honeycombs = honeycomb.honeycombs;
+        //            return;
+        //        }
+        //    }
+        //}
     }
 
 

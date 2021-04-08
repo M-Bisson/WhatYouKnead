@@ -6,6 +6,7 @@ public class SpawnBees : MonoBehaviour
 {
     public GameObject[] bees = new GameObject[5];
     public GameObject honey;
+    public Inventory inventory;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,14 @@ public class SpawnBees : MonoBehaviour
             {
                 break;
             }
-            honey.SetActive(true);
+            if (!inventory.hasHoneycomb)
+            {
+                honey.SetActive(true);
+            } else
+            {
+                honey.SetActive(false);
+            }
+            
         }
     }
 
