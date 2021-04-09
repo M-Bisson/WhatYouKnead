@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VillageEndStart : MonoBehaviour
+public class FieldStart : MonoBehaviour
 {
     private GameObject character;
     private Transform knife;
@@ -16,7 +16,7 @@ public class VillageEndStart : MonoBehaviour
     {
         character = GameObject.Find("DarkForestCharacter");
         knife = character.transform.Find("throwing knife");
-        Debug.Log("Village boi: " + character);
+        Debug.Log("DarkForest boi: " + character);
         oldInventory = character.GetComponent<Inventory>();
         if (character != null)
         {

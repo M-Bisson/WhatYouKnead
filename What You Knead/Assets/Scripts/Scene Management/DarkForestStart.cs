@@ -25,6 +25,7 @@ public class DarkForestStart : MonoBehaviour
             newKnife.knives = oldKnife.knives;
             character.SetActive(false);
             Debug.Log("knives from last scene: " + newKnife.knives);
+            //---------------------------
             newInventory.honeycombs = oldInventory.honeycombs;
             Debug.Log("honeycombs from last scene: " + newInventory.honeycombs);
             newInventory.hasHoneycomb = oldInventory.hasHoneycomb;
