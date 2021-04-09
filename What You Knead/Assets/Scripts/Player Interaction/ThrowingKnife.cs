@@ -10,11 +10,12 @@ public class ThrowingKnife : MonoBehaviour
     public GameObject knifeTemplate;
     Vector3 knifeOffset = new Vector3(0, 0, 0);
     public GameObject knifeSpawnPoint;
+    public Inventory inventory;
 
     // Update is called once per frame
     void Update()
     {
-
+        inventory.knives = knives;
         //if you have a knife and right click, throw it
         if (Input.GetMouseButtonDown(1) && knives > 0)
         {

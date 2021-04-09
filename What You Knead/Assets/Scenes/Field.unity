@@ -12633,6 +12633,14 @@ MonoBehaviour:
   - {fileID: 7136281517903369138, guid: 00e2b249b815a4bea9274301b7032deb, type: 3}
   - {fileID: 8223639751316348614, guid: a4a2616635f4f4d1cbba16caf1e9e92b, type: 3}
   knife: {fileID: 1959801425}
+  knives: 0
+  hasKnife: 0
+  honeycombs: 0
+  hasHoneycomb: 0
+  berries: 0
+  hasBerry: 0
+  wheat: 0
+  hasWheat: 0
 --- !u!1001 &295037148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -91737,6 +91745,7 @@ MonoBehaviour:
   character: {fileID: 294058509}
   knifeTemplate: {fileID: 1072011469}
   knifeSpawnPoint: {fileID: 1959801424}
+  inventory: {fileID: 294058512}
 --- !u!1001 &1968656671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -97966,6 +97975,7 @@ MonoBehaviour:
   - {fileID: 469043593}
   - {fileID: 2032343668}
   wheat: {fileID: 7115325233475586726}
+  inventory: {fileID: 294058512}
 --- !u!1 &2088674572
 GameObject:
   m_ObjectHideFlags: 0
@@ -101412,6 +101422,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5536492628641181996, guid: 641d599c52c71a743a09946ecbcb55a4,
+        type: 3}
+      propertyPath: m_TagString
+      value: wheat
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 641d599c52c71a743a09946ecbcb55a4, type: 3}
 --- !u!1001 &3981407088947819944
@@ -101633,3 +101648,16 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3344806935304502154}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7115325233475586727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7115325233475586726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6cda9f7c2f454906a087c9ebb26da2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 0}

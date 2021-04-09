@@ -63,11 +63,11 @@ public class KnifeInteraction : MonoBehaviour
     {
         //if (coll.gameObject.tag != "throwPlane")
         //{
-            Debug.Log("Collision object: " + coll.gameObject.name);
-            gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-            gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
-            gameObject.GetComponent<Rigidbody>().useGravity = false;
+            //Debug.Log("Collision object: " + coll.gameObject.name);
+            //gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            //gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            //gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
+            //gameObject.GetComponent<Rigidbody>().useGravity = false;
         //}
     }
 }

@@ -7312,8 +7312,14 @@ MonoBehaviour:
   - {fileID: 7136281517903369138, guid: 00e2b249b815a4bea9274301b7032deb, type: 3}
   - {fileID: 8223639751316348614, guid: a4a2616635f4f4d1cbba16caf1e9e92b, type: 3}
   knife: {fileID: 1959801425}
+  knives: 0
+  hasKnife: 0
   honeycombs: 0
   hasHoneycomb: 0
+  berries: 0
+  hasBerry: 0
+  wheat: 0
+  hasWheat: 0
 --- !u!1001 &295245252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74000,7 +74006,7 @@ MonoBehaviour:
   - {fileID: 471541225}
   - {fileID: 1096554173}
   honey: {fileID: 259488182}
-  inventory: {fileID: 0}
+  inventory: {fileID: 294058512}
 --- !u!1001 &1697530926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85528,6 +85534,7 @@ MonoBehaviour:
   character: {fileID: 294058509}
   knifeTemplate: {fileID: 1072011469}
   knifeSpawnPoint: {fileID: 1959801424}
+  inventory: {fileID: 294058512}
 --- !u!1 &1969049690
 GameObject:
   m_ObjectHideFlags: 0
