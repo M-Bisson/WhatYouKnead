@@ -8,32 +8,145 @@ public class Inventory : MonoBehaviour
     public GameObject inventoryPanel;
     public GameObject[] inventoryIcons;
     public ThrowingKnife knife;
-    private int knives = 0;
+    public int knives;
+    public bool hasKnife;
+    public int honeycombs;
+    public bool hasHoneycomb;
+    public int berries;
+    public bool hasBerry;
+    public int wheat;
+    public bool hasWheat;
 
-    private void Update()
+
+    //------make sure inventory icons get instantiated
+    private bool honeyInv;
+    private bool knifeInv;
+    private bool berryInv;
+    private bool wheatInv;
+
+    void Start()
+    {
+        //GameObject i;
+
+        //if (knives >= 1 && hasKnife)
+        //{
+        //    i = Instantiate(inventoryIcons[0]);
+        //    i.transform.SetParent(inventoryPanel.transform);
+        //    knifeInv = true;
+        //    foreach (Transform child in inventoryPanel.transform)
+        //    {
+        //        //if item already in inventory
+        //        if (child.gameObject.tag == "knife")
+        //        {
+        //            child.Find("Text").GetComponent<Text>().text = "" + knives;
+        //        }
+        //    }
+        //}
+
+        //if (honeycombs >= 1 && hasHoneycomb)
+        //{
+        //    Debug.Log("Instantiate honeycomb");
+        //    honeyInv = true;
+        //    i = Instantiate(inventoryIcons[1]);
+        //    i.transform.SetParent(inventoryPanel.transform);
+        //}
+
+        //if (berries == 1 && hasBerry)
+        //{
+        //    Debug.Log("Instantiate berry");
+        //    berryInv = true;
+        //    i = Instantiate(inventoryIcons[2]);
+        //    i.transform.SetParent(inventoryPanel.transform);
+        //}
+
+        //if (wheat == 1 && hasWheat)
+        //{
+        //    Debug.Log("Instantiate wheat");
+        //    wheatInv = true;
+        //    i = Instantiate(inventoryIcons[3]);
+        //    i.transform.SetParent(inventoryPanel.transform);
+        //}
+
+    }
+
+    void Update()
     {
         GameObject i;
-        //ThrowingKnife knife = character.GetComponent<ThrowingKnife>();
-        //Debug.Log("knives: " + knife.knives);
-        if (knives != knife.knives && knife.knives == 1)
+        
+        if (knives >= 1 && !hasKnife && !knifeInv)
         {
+            Debug.Log("I am what is putting the knife in the inventory");
+            knifeInv = true;
             i = Instantiate(inventoryIcons[0]);
             i.transform.SetParent(inventoryPanel.transform);
-            knives = knife.knives;
-        }
-        if (knives != knife.knives && knife.knives > 1)
-        {
+            hasKnife = true;
+
             foreach (Transform child in inventoryPanel.transform)
             {
                 //if item already in inventory
                 if (child.gameObject.tag == "knife")
                 {
-                    child.Find("Text").GetComponent<Text>().text = "" + knife.knives;
-                    knives = knife.knives;
-                    return;
+                    child.Find("Text").GetComponent<Text>().text = "" + knives;
+                }
+            }
+        } else if (knives >= 1) {
+            foreach (Transform child in inventoryPanel.transform)
+            {
+                //if item already in inventory
+                if (child.gameObject.tag == "knife")
+                {
+                    child.Find("Text").GetComponent<Text>().text = "" + knives;
+                }
+            }
+        } else if (knives < 1)
+        {
+            foreach(Transform child in inventoryPanel.transform)
+            {
+                //if item already in inventory
+                if (child.gameObject.tag == "knife")
+                {
+                    child.Find("Text").GetComponent<Text>().text = "" + knives;
                 }
             }
         }
+        //if (knives != knife.knives)
+        //{
+        //    foreach (Transform child in inventoryPanel.transform)
+        //    {
+        //        //if item already in inventory
+        //        if (child.gameObject.tag == "knife")
+        //        {
+        //            child.Find("Text").GetComponent<Text>().text = "" + knife.knives;
+        //            knives = knife.knives;
+        //            return;
+        //        }
+        //    }
+        //}
+
+        if (honeycombs == 1 && !honeyInv)
+        {
+            i = Instantiate(inventoryIcons[1]);
+            i.transform.SetParent(inventoryPanel.transform);
+            hasHoneycomb = true;
+            honeyInv = true;
+        }
+
+        if (berries == 1 && !berryInv)
+        {
+            i = Instantiate(inventoryIcons[2]);
+            i.transform.SetParent(inventoryPanel.transform);
+            hasBerry = true;
+            berryInv = true;
+        }
+
+        if (wheat == 1 && !wheatInv)
+        {
+            i = Instantiate(inventoryIcons[3]);
+            i.transform.SetParent(inventoryPanel.transform);
+            hasWheat = true;
+            wheatInv = true;
+        }
+
     }
 
 

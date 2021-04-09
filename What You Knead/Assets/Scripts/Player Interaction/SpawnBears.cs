@@ -6,6 +6,7 @@ public class SpawnBears : MonoBehaviour
 {
     public GameObject[] bears = new GameObject[5];
     public GameObject berry;
+    public Inventory inventory;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +33,14 @@ public class SpawnBears : MonoBehaviour
             {
                 break;
             }
-            berry.SetActive(true);
+            if (!inventory.hasBerry)
+            {
+                berry.SetActive(true);
+            } else
+            {
+                berry.SetActive(false);
+            }
+            
         }
     }
 }

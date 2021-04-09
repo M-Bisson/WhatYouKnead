@@ -6,6 +6,7 @@ public class SpawnGrasshoppers : MonoBehaviour
 {
     public GameObject[] grasshoppers = new GameObject[6];
     public GameObject wheat;
+    public Inventory inventory;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +33,15 @@ public class SpawnGrasshoppers : MonoBehaviour
             {
                 break;
             }
-            wheat.SetActive(true);
+            if (!inventory.hasBerry)
+            {
+                wheat.SetActive(true);
+            }
+            else
+            {
+                wheat.SetActive(false);
+            }
+            
         }
     }
 }
