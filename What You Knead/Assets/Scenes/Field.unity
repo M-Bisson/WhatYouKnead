@@ -101386,7 +101386,7 @@ PrefabInstance:
     - target: {fileID: 5160634906023930774, guid: 641d599c52c71a743a09946ecbcb55a4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.006
+      value: 5.024
       objectReference: {fileID: 0}
     - target: {fileID: 5160634906023930774, guid: 641d599c52c71a743a09946ecbcb55a4,
         type: 3}
@@ -101436,7 +101436,7 @@ PrefabInstance:
     - target: {fileID: 5536492628641181996, guid: 641d599c52c71a743a09946ecbcb55a4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5536492628641181996, guid: 641d599c52c71a743a09946ecbcb55a4,
         type: 3}
@@ -101676,4 +101676,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6cda9f7c2f454906a087c9ebb26da2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
+  inventory: {fileID: 294058512}
+--- !u!65 &7115325233475586728
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7115325233475586726}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 10, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
