@@ -22,18 +22,20 @@ public class PauseMenuToggle : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
-            Cursor.lockState = CursorLockMode.None;
             if (canvasGroup.interactable)
             {
                 canvasGroup.interactable = false; canvasGroup.blocksRaycasts = false; canvasGroup.alpha = 0f;
                 Time.timeScale = 1f;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
             }
             else {
                 canvasGroup.interactable = true; canvasGroup.blocksRaycasts = true; canvasGroup.alpha = 1f;
-                Time.timeScale = 0f; 
-                   
+                Time.timeScale = 0f;
+                Cursor.lockState = CursorLockMode.None;
+
             }
-        }
+        } 
 
     }
 }
