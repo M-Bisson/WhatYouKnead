@@ -7,10 +7,12 @@ public class SpawnGrasshoppers : MonoBehaviour
     public GameObject[] grasshoppers = new GameObject[6];
     public GameObject wheat;
     public Inventory inventory;
+    private bool triggered;
 
     // Start is called before the first frame update
     void Start()
     {
+        triggered = false;
         foreach (GameObject gh in grasshoppers)
         {
             gh.SetActive(false);
@@ -19,29 +21,34 @@ public class SpawnGrasshoppers : MonoBehaviour
 
     void OnTriggerEnter()
     {
-        foreach (GameObject gh in grasshoppers)
+        if (!triggered)
         {
-            gh.SetActive(true);
+            foreach (GameObject gh in grasshoppers)
+            {
+                gh.SetActive(true);
+            }
         }
+        triggered = true;
+
     }
 
     void Update()
     {
-        foreach (GameObject gh in grasshoppers)
+        if (triggered)
         {
-            if (gh.activeSelf)
+            foreach (GameObject gh in grasshoppers)
             {
-                break;
+                if (gh.activeSelf)
+                {
+                    break;
+                }
+                else
+                {
+                    wheat.SetActive(true);
+                    gameObject.SetActive(false);
+                }
+
             }
-            if (!inventory.hasBerry)
-            {
-                wheat.SetActive(true);
-            }
-            else
-            {
-                wheat.SetActive(false);
-            }
-            
         }
     }
 }

@@ -16,6 +16,7 @@ public class Inventory : MonoBehaviour
     public bool hasBerry;
     public int wheat;
     public bool hasWheat;
+    public Player player;
 
 
     //------make sure inventory icons get instantiated
@@ -75,7 +76,7 @@ public class Inventory : MonoBehaviour
         
         if (knives >= 1 && !hasKnife && !knifeInv)
         {
-            Debug.Log("I am what is putting the knife in the inventory");
+            //Debug.Log("I am what is putting the knife in the inventory");
             knifeInv = true;
             i = Instantiate(inventoryIcons[0]);
             i.transform.SetParent(inventoryPanel.transform);
@@ -145,6 +146,11 @@ public class Inventory : MonoBehaviour
             i.transform.SetParent(inventoryPanel.transform);
             hasWheat = true;
             wheatInv = true;
+        }
+
+        if(hasBerry && hasHoneycomb && hasWheat)
+        {
+            player.gotIngredients();
         }
 
     }

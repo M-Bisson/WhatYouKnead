@@ -1555,7 +1555,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &44097942
 Transform:
   m_ObjectHideFlags: 0
@@ -12576,6 +12576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 0
+  hasIngredients: 0
 --- !u!4 &294058509 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 19d6d652adb07dc40a399aff5ffbc137,
@@ -12641,6 +12642,7 @@ MonoBehaviour:
   hasBerry: 0
   wheat: 0
   hasWheat: 0
+  player: {fileID: 294058508}
 --- !u!1001 &295037148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45930,7 +45932,7 @@ Transform:
   - {fileID: 816930878}
   - {fileID: 384782981}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &966637877
 GameObject:
@@ -51208,7 +51210,7 @@ Transform:
   - {fileID: 812089794}
   - {fileID: 44097942}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1070625360
 PrefabInstance:
@@ -88141,6 +88143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca3647a16da1ed408d80b9520082462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameStarted: 0
 --- !u!225 &1877844542
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -101436,12 +101439,17 @@ PrefabInstance:
     - target: {fileID: 5536492628641181996, guid: 641d599c52c71a743a09946ecbcb55a4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5536492628641181996, guid: 641d599c52c71a743a09946ecbcb55a4,
         type: 3}
       propertyPath: m_TagString
       value: wheat
+      objectReference: {fileID: 0}
+    - target: {fileID: 5536492628641181996, guid: 641d599c52c71a743a09946ecbcb55a4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 641d599c52c71a743a09946ecbcb55a4, type: 3}

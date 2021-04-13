@@ -6,10 +6,12 @@ using UnityEngine;
 public class PauseMenuToggle : MonoBehaviour
 {   
     private CanvasGroup canvasGroup;
+    public bool gameStarted;
     // Start is called before the first frame update
 
     private void Start()
     {
+        gameStarted = false;
         //Cursor.lockState = CursorLockMode.None;
     }
     void Awake()
@@ -20,7 +22,7 @@ public class PauseMenuToggle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (Input.GetKeyUp(KeyCode.Escape) && gameStarted)
         {
             if (canvasGroup.interactable)
             {
