@@ -5,7 +5,7 @@ using UnityEngine;
 public class WheatInteraction : MonoBehaviour
 {
     public Inventory inventory;
-
+    public AudioSource sound;
     void Start()
 
     {
@@ -15,6 +15,7 @@ public class WheatInteraction : MonoBehaviour
     void pickUpWheat()
     {
         //Debug.Log("Picked up Wheat");
+        sound.Play();
         inventory.wheat++;
         gameObject.SetActive(false);
     }

@@ -7,6 +7,7 @@ public class Continue : MonoBehaviour
 {
     public Image startImage;
     public PauseMenuToggle pauseMenu;
+    public AudioSource sound;
 
     void Start()
     {
@@ -15,9 +16,10 @@ public class Continue : MonoBehaviour
 
     public void ContinueToPlay()
     {
+        sound.Play();
         pauseMenu.gameStarted = true;
         startImage.gameObject.SetActive(false);
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         gameObject.SetActive(false);
 
     }

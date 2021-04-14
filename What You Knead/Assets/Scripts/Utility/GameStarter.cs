@@ -6,30 +6,40 @@ using UnityEngine.EventSystems;
 
 public class GameStarter : MonoBehaviour
 {
+    public AudioSource sound_menu;
+    public AudioSource sound_startGame;
     public void StartGame()
     {
         Scene scene = SceneManager.GetActiveScene();
+
         if (scene.name == "Village" || scene.name == "Menu")
         {
             if (EventSystem.current.currentSelectedGameObject.name == "HowToPlay")
             {
+                sound_menu.Play();
                 SceneManager.LoadScene("HowToPlay");
-            } else
+            }
+            else
             {
+                sound_startGame.Play();
                 SceneManager.LoadScene("Village");
             }
-        } else if (scene.name == "Forest")
+        }
+        else if (scene.name == "Forest")
         {
             SceneManager.LoadScene("Forest");
-        } else if (scene.name == "DarkForest")
+        }
+        else if (scene.name == "DarkForest")
         {
             SceneManager.LoadScene("DarkForest");
-        } else if (scene.name == "Field")
+        }
+        else if (scene.name == "Field")
         {
             SceneManager.LoadScene("Field");
         }
         else if (scene.name == "HowToPlay")
         {
+            sound_menu.Play();
             SceneManager.LoadScene("Menu");
         }
     }

@@ -9,6 +9,7 @@ public class SpawnRocks : MonoBehaviour
     {
         if(c.tag == "Player")
         {
+            GetComponent<AudioSource>().Play();
             rocks.SetActive(true);
         }
     }
