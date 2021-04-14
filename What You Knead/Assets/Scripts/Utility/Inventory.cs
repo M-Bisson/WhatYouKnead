@@ -72,6 +72,7 @@ public class Inventory : MonoBehaviour
 
     void Update()
     {
+
         GameObject i;
         
         if (knives >= 1 && !hasKnife && !knifeInv)
