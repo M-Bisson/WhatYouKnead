@@ -10,17 +10,29 @@ public class ThrowingKnife : MonoBehaviour
     public GameObject knifeTemplate;
     Vector3 knifeOffset = new Vector3(0, 0, 0);
     public GameObject knifeSpawnPoint;
+    public Inventory inventory;
+    public AudioSource sound;
 
     // Update is called once per frame
     void Update()
     {
-
+        inventory.knives = knives;
         //if you have a knife and right click, throw it
         if (Input.GetMouseButtonDown(1) && knives > 0)
         {
             //Debug.Log("Throwing Knife");
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
+
+            // add sound effect
+            if (sound != null)
+            {
+                sound.Play();
+            } else
+            {
+                Debug.LogWarning("Could not find sound!");
+            }
+
             if (Physics.Raycast(ray, out hit))
             {
                 //Debug.DrawLine(character.position, hit.point);
@@ -46,4 +58,5 @@ public class ThrowingKnife : MonoBehaviour
         }
 
     }
+
 }

@@ -10,6 +10,7 @@ public class KnifeInteraction : MonoBehaviour
     public int knives = 0;
     private Renderer rend;
     private Camera cam;
+    public AudioSource sound;
 
     void Start()
 
@@ -54,6 +55,15 @@ public class KnifeInteraction : MonoBehaviour
         //if you click and are in the plane pick the knife up
         if (Input.GetMouseButtonDown(0) && gameObject.tag == "knife")
         {
+            // add sound effect
+            if (sound != null)
+            {
+                sound.Play();
+            }
+            else // sound not found
+            {
+                Debug.LogError("Could not find sound!");
+            }
             pickUpKnife();
         }
 
@@ -63,11 +73,12 @@ public class KnifeInteraction : MonoBehaviour
     {
         //if (coll.gameObject.tag != "throwPlane")
         //{
-            Debug.Log("Collision object: " + coll.gameObject.name);
-            gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-            gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
-            gameObject.GetComponent<Rigidbody>().useGravity = false;
+            //Debug.Log("Collision object: " + coll.gameObject.name);
+            //gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            //gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+            //gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
+            //gameObject.GetComponent<Rigidbody>().useGravity = false;
         //}
     }
+
 }

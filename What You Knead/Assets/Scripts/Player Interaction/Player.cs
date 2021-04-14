@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     public int lives;
+    public bool hasIngredients;
     // Start is called before the first frame update
     void Start()
     {
-        lives = 5; 
+        lives = 5;
+        hasIngredients = false;
     }
 
     // Update is called once per frame
@@ -17,8 +19,14 @@ public class Player : MonoBehaviour
     {
         if(lives <= 0)
         {
-            SceneManager.LoadScene("Village");
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
 
         }
+    }
+
+    public void gotIngredients()
+    {
+        hasIngredients = true;
     }
 }

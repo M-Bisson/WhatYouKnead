@@ -9,6 +9,7 @@ public class ForestStart : MonoBehaviour
     public GameObject forestCharacter;
     public ThrowingKnife newKnife;
     private ThrowingKnife oldKnife;
+
     // Start is called before the first frame update
     void Start()
     {

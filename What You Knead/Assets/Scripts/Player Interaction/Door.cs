@@ -20,6 +20,10 @@ public class Door : MonoBehaviour //https://forum.unity.com/threads/door-open-cl
     // this is the rotation rate (if rotation is applied to the door)
     public float rotationSpeed = 70;
 
+    // sound effect for opening and closing the door
+    public AudioSource sound;
+
+
     void Start()
     {
         // copy the door to keep its position
@@ -43,7 +47,17 @@ public class Door : MonoBehaviour //https://forum.unity.com/threads/door-open-cl
         // whenever player clicks, open the door
         if (Input.GetMouseButtonDown(0))
         {
+            // add sound effect
+            if (sound != null)
+            {
+                sound.Play();
+            }
+            else
+            {
+                Debug.LogWarning("Could not find sound!");
+            }
             isOpened = !isOpened;
+            
         }
     }
 
