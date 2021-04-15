@@ -10,36 +10,14 @@ public class KnifeInteraction : MonoBehaviour
     public int knives = 0;
     private Renderer rend;
     private Camera cam;
+    public AudioSource sound;
 
     void Start()
 
     {
-        //cam = Camera.main;
-        //if (gameObject.layer == 8 && gameObject.name != "knifeParent")
-        //{
-        //    //Vector3 worldMousePosition = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam.nearClipPlane));
-        //    //Vector3 direction = worldMousePosition - character.transform.position;
-        //    //Debug.Log(direction);
-        //    gameObject.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(1, 0, 0) * throwSpeed, ForceMode.Impulse);
-        //}
         gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-        //rend = GetComponent<Renderer>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //if you have a knife and right click, throw it
-        //if (Input.GetMouseButtonDown(1) && knives > 0)
-        //{
-        //    Debug.Log("Throwing Knife");
-        //    GameObject cloneKnife = Instantiate(knife, knife.transform.position, knife.transform.rotation) as GameObject;
-        //    cloneKnife.GetComponent<MeshRenderer>().enabled = true;
-        //    cloneKnife.transform.localScale = new Vector3(10, 10, 10);
-        //    cloneKnife.GetComponent<Rigidbody>().AddForce(cloneKnife.transform.forward * throwSpeed);
-        //    knives -= 1;
-        //}
-    }
 
     void pickUpKnife()
     {
@@ -54,20 +32,19 @@ public class KnifeInteraction : MonoBehaviour
         //if you click and are in the plane pick the knife up
         if (Input.GetMouseButtonDown(0) && gameObject.tag == "knife")
         {
+            // add sound effect
+            if (sound != null)
+            {
+                sound.Play();
+            }
+            else // sound not found
+            {
+                Debug.LogError("Could not find sound!");
+            }
             pickUpKnife();
         }
 
     }
 
-    void OnCollisionEnter(Collision coll)
-    {
-        //if (coll.gameObject.tag != "throwPlane")
-        //{
-            //Debug.Log("Collision object: " + coll.gameObject.name);
-            //gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            //gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-            //gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
-            //gameObject.GetComponent<Rigidbody>().useGravity = false;
-        //}
-    }
+
 }

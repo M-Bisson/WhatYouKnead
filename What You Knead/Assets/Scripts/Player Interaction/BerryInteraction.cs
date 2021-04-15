@@ -5,6 +5,7 @@ using UnityEngine;
 public class BerryInteraction : MonoBehaviour
 {
     public Inventory inventory;
+    public AudioSource sound;
 
     void Start()
 
@@ -15,6 +16,7 @@ public class BerryInteraction : MonoBehaviour
     void pickUpBerry()
     {
         //Debug.Log("Picked up Berry");
+        sound.Play();
         inventory.berries++;
         gameObject.SetActive(false);
     }

@@ -7,6 +7,7 @@ public class HoneycombInteraction : MonoBehaviour
     //public GameObject character;
     //public int honeycombs = 0;
     public Inventory inventory;
+    public AudioSource sound;
 
     void Start()
 
@@ -17,6 +18,10 @@ public class HoneycombInteraction : MonoBehaviour
     void pickUpHoneycomb()
     {
         //Debug.Log("Picked up Honeycomb");
+        if (sound != null)
+        {
+            sound.Play();
+        }
         inventory.honeycombs++;
         gameObject.SetActive(false);
     }

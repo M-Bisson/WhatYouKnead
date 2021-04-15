@@ -6,6 +6,9 @@ public class ChestOpen : MonoBehaviour
 {
     private Animator animator;
     public GameObject character;
+    [SerializeField]
+    public AudioSource sound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,13 +18,14 @@ public class ChestOpen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnTriggerEnter(Collider c)
     {
-        if(c.tag == "Player")
+        if (c.tag == "Player")
         {
+            sound.Play();
             animator.SetTrigger("Open");
         }
     }
