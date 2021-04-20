@@ -33,7 +33,7 @@ public class SpawnBears : MonoBehaviour
             {
                 break;
             }
-            if (!inventory.hasBerry)
+            if (!Inventory.hasBerry)
             {
                 berry.SetActive(true);
             } else

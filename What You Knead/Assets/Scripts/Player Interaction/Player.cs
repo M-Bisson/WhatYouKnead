@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
 
         if(lives <= 0)
         {
+            DontDestroyOnLoad(gameObject);
             Scene scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);
 

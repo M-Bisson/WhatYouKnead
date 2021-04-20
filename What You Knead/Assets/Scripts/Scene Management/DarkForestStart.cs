@@ -20,16 +20,18 @@ public class DarkForestStart : MonoBehaviour
         oldInventory = character.GetComponent<Inventory>();
         if (character != null)
         {
+            character.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            Vector3 pos = character.transform.position;
+            pos.y = 4;
+            character.transform.position = pos;            
             oldKnife = knife.GetComponent<ThrowingKnife>();
             Debug.Log("knife??: " + oldKnife);
             newKnife.knives = oldKnife.knives;
-            character.SetActive(false);
+            //character.SetActive(false);
             Debug.Log("knives from last scene: " + newKnife.knives);
             //---------------------------
             newInventory.honeycombs = oldInventory.honeycombs;
             Debug.Log("honeycombs from last scene: " + newInventory.honeycombs);
-            newInventory.hasHoneycomb = oldInventory.hasHoneycomb;
-            Debug.Log("hasHoneycomb from last scene: " + newInventory.honeycombs);
         }
     }
 }

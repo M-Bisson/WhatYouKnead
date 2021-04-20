@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FieldStart : MonoBehaviour
 {
@@ -12,27 +13,34 @@ public class FieldStart : MonoBehaviour
     public Inventory newInventory;
     private Inventory oldInventory;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        GameObject inventory = GameObject.Find("InventoryPanel");
         character = GameObject.Find("DarkForestCharacter");
+        newInventory.inventoryPanel = inventory;
         knife = character.transform.Find("throwing knife");
         Debug.Log("DarkForest boi: " + character);
         oldInventory = character.GetComponent<Inventory>();
+        fieldCharacter.GetComponent<Inventory>().knifeInv = true;
+        if (oldInventory.honeyInv) { 
+            fieldCharacter.GetComponent<Inventory>().honeyInv = true;
+        }
+        if (oldInventory.berryInv)
+        {
+            fieldCharacter.GetComponent<Inventory>().berryInv = true;
+        }
         if (character != null)
         {
+            character.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             oldKnife = knife.GetComponent<ThrowingKnife>();
             Debug.Log("knife??: " + oldKnife);
             newKnife.knives = oldKnife.knives;
-            character.SetActive(false);
-            Debug.Log("knives from last scene: " + newKnife.knives);
-            newInventory.honeycombs = oldInventory.honeycombs;
-            Debug.Log("honeycombs from last scene: " + newInventory.honeycombs);
-            newInventory.hasHoneycomb = oldInventory.hasHoneycomb;
-            Debug.Log("hasHoneycomb from last scene: " + newInventory.honeycombs);
-            newInventory.berries = oldInventory.berries;
-            Debug.Log("berries from last scene: " + newInventory.berries);
-            newInventory.hasBerry = oldInventory.hasBerry;
-            Debug.Log("hasBerry from last scene: " + newInventory.berries);
+            //character.SetActive(false);
+            //Debug.Log("knives from last scene: " + newKnife.knives);
+            //newInventory.honeycombs = oldInventory.honeycombs;
+            //Debug.Log("honeycombs from last scene: " + newInventory.honeycombs);
+            //newInventory.berries = oldInventory.berries;
+            //Debug.Log("berries from last scene: " + newInventory.berries);
         }
     }
 }

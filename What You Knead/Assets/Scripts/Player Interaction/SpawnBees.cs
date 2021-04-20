@@ -31,7 +31,7 @@ public class SpawnBees : MonoBehaviour
             {
                 break;
             }
-            if (!inventory.hasHoneycomb)
+            if (!Inventory.hasHoneycomb)
             {
                 honey.SetActive(true);
             } else

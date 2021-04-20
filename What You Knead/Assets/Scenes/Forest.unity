@@ -7924,11 +7924,8 @@ MonoBehaviour:
   knives: 0
   hasKnife: 0
   honeycombs: 0
-  hasHoneycomb: 0
   berries: 0
-  hasBerry: 0
   wheat: 0
-  hasWheat: 0
   player: {fileID: 294058508}
 --- !u!1001 &295245252
 PrefabInstance:
@@ -13405,12 +13402,12 @@ PrefabInstance:
     - target: {fileID: 8879528566716807029, guid: 19d6d652adb07dc40a399aff5ffbc137,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.32
+      value: 0.58
       objectReference: {fileID: 0}
     - target: {fileID: 8879528566716807029, guid: 19d6d652adb07dc40a399aff5ffbc137,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99951476
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8879528566716807029, guid: 19d6d652adb07dc40a399aff5ffbc137,
         type: 3}
@@ -13420,7 +13417,7 @@ PrefabInstance:
     - target: {fileID: 8879528566716807029, guid: 19d6d652adb07dc40a399aff5ffbc137,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.031149076
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8879528566716807029, guid: 19d6d652adb07dc40a399aff5ffbc137,
         type: 3}
@@ -13430,7 +13427,7 @@ PrefabInstance:
     - target: {fileID: 8879528566716807029, guid: 19d6d652adb07dc40a399aff5ffbc137,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 3.57
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19d6d652adb07dc40a399aff5ffbc137, type: 3}
@@ -40364,8 +40361,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.1531749, y: -0.026389271, z: 0.0040919334, w: 0.98783827}
-  m_LocalPosition: {x: -0.14376947, y: -0.1449995, z: 0.80340314}
+  m_LocalRotation: {x: 0.23307309, y: -0.07204824, z: 0.01731844, w: 0.9696319}
+  m_LocalPosition: {x: -0.10854806, y: -0.05439949, z: 0.71665716}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1279119666}
@@ -45359,7 +45356,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 1, y: 0.5, z: 0.5}
+    m_Scale: {x: 0.75, y: 0.5, z: 0.5}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -57973,7 +57970,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.1, z: 10}
+  m_Size: {x: 0.75, y: 0.1, z: 10}
   m_Center: {x: 0, y: -1.36, z: 4.67}
 --- !u!1001 &1288705559
 PrefabInstance:
@@ -66047,8 +66044,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399427693}
-  m_LocalRotation: {x: 0.15305695, y: 0.0468905, z: -0.00727088, w: 0.98707753}
-  m_LocalPosition: {x: -1.1008806, y: 12.470007, z: -11.560023}
+  m_LocalRotation: {x: 0.23371562, y: 0.0000078082085, z: -0.0000018775463, w: 0.97230506}
+  m_LocalPosition: {x: -0.0002469169, y: 17.000008, z: -16.109983}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 1395365530}
