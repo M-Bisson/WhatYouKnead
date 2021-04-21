@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(CanvasGroup))]
 public class PauseMenuToggle : MonoBehaviour
@@ -12,8 +13,15 @@ public class PauseMenuToggle : MonoBehaviour
     private void Start()
     {
         gameStarted = false;
-        //Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.None;
+
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "Forest" || scene.name == "Field" || scene.name == "DarkForest")
+        {
+            gameStarted = true;
+        }
     }
+
     void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
@@ -28,8 +36,8 @@ public class PauseMenuToggle : MonoBehaviour
             {
                 canvasGroup.interactable = false; canvasGroup.blocksRaycasts = false; canvasGroup.alpha = 0f;
                 Time.timeScale = 1f;
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
+                //Cursor.lockState = CursorLockMode.Locked;
+                //Cursor.visible = false;
             }
             else {
                 canvasGroup.interactable = true; canvasGroup.blocksRaycasts = true; canvasGroup.alpha = 1f;

@@ -39,8 +39,11 @@ public class GameStarter : MonoBehaviour
         }
         else if (scene.name == "HowToPlay")
         {
-            sound_menu.Play();
-            SceneManager.LoadScene("Menu");
+            if (EventSystem.current.currentSelectedGameObject.name == "BackButton")
+            {
+                sound_menu.Play();
+                SceneManager.LoadScene("Menu");
+            }
         }
     }
 }
