@@ -42501,7 +42501,7 @@ GameObject:
   - component: {fileID: 892327395}
   - component: {fileID: 892327394}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Inventory Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64101,6 +64101,7 @@ MonoBehaviour:
   fieldCharacter: {fileID: 294058505}
   newKnife: {fileID: 1959801425}
   newInventory: {fileID: 294058512}
+  inventoryPan: {fileID: 1707898943}
 --- !u!1001 &1331125014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81480,12 +81481,12 @@ GameObject:
   - component: {fileID: 1707898946}
   - component: {fileID: 1707898945}
   m_Layer: 5
-  m_Name: InventoryPanel
+  m_Name: Inventory Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1707898944
 RectTransform:
   m_ObjectHideFlags: 0

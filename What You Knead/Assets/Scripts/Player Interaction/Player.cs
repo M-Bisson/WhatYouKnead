@@ -33,10 +33,18 @@ public class Player : MonoBehaviour
             footsteps.Stop();
         }
 
-        if(lives <= 0)
+        if (lives <= 0)
         {
-            DontDestroyOnLoad(gameObject);
+
             Scene scene = SceneManager.GetActiveScene();
+            if (scene.name == "DarkForest" && gameObject.name == "ForestCharacter")
+            {
+                DontDestroyOnLoad(gameObject);
+            }
+            if (scene.name == "Field" && gameObject.name == "DarkForestCharacter")
+            {
+                DontDestroyOnLoad(gameObject);
+            }
             SceneManager.LoadScene(scene.name);
 
             //if (scene.name == "Forest")

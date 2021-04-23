@@ -11,12 +11,14 @@ public class DarkForestStart : MonoBehaviour
     private ThrowingKnife oldKnife;
     public Inventory newInventory;
     private Inventory oldInventory;
+    public GameObject inventoryPan;
     // Start is called before the first frame update
     void Start()
     {
         character = GameObject.Find("ForestCharacter");
         knife = character.transform.Find("throwing knife");
         Debug.Log("Forest boi: " + character);
+        character.GetComponent<Inventory>().inventoryPanel = inventoryPan;
         oldInventory = character.GetComponent<Inventory>();
         if (character != null)
         {

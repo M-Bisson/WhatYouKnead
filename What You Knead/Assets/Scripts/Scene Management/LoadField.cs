@@ -13,7 +13,6 @@ public class LoadField : MonoBehaviour
         if (c.tag == "Player")
         {
             DontDestroyOnLoad(character);
-            DontDestroyOnLoad(invPanel);
             SceneManager.LoadScene("Field");
         }
     }
