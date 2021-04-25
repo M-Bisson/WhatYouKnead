@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4428800423142630646}
   m_Layer: 5
   m_Name: Honeycomb
-  m_TagString: Untagged
+  m_TagString: honeycomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,4 +152,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 0
