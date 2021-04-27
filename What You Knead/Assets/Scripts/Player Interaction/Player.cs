@@ -11,8 +11,10 @@ public class Player : MonoBehaviour
     public AudioSource footsteps;
     public Image cutscene;
     public Button button;
-    public Image endScene;
-    public Button quitButton;
+    //public Image winScene;
+    //public Button winExitButton;
+    //public Image loseScene;
+    //public Button loseExitButton;
 
     // Start is called before the first frame update
     void Start()
@@ -58,11 +60,22 @@ public class Player : MonoBehaviour
 
         }
 
-        if (hasIngredients)
-        {
-            endScene.gameObject.SetActive(true);
-            quitButton.gameObject.SetActive(true);
-        }
+        //if (hasIngredients)
+        //{
+        //    endScene.gameObject.SetActive(true);
+        //    quitButton.gameObject.SetActive(true);
+        //}
+        //Scene scene = SceneManager.GetActiveScene();
+        //if (scene.name == "VillageEndScene" && hasIngredients)
+        //{
+        //    winScene.gameObject.SetActive(true);
+        //    winExitButton.gameObject.SetActive(true);
+        //}
+        //if (scene.name == "VillageEndScene" && !hasIngredients)
+        //{
+        //    loseScene.gameObject.SetActive(true);
+        //    loseExitButton.gameObject.SetActive(true);
+        //}
     }
 
     public void gotIngredients()
