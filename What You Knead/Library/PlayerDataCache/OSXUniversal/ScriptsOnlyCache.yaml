@@ -50,7 +50,6 @@ ScriptsOnlyBuild:
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachineComposer
-    - Cinemachine.CinemachineHardLookAt
     - Cinemachine.CinemachinePOV
     - Cinemachine.CinemachinePipeline
     - Cinemachine.CinemachineVirtualCamera
@@ -205,6 +204,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12282}
     - Class: 114
+      Script: {instanceID: 12326}
+    - Class: 114
       Script: {instanceID: 12414}
     - Class: 114
       Script: {instanceID: 12418}
@@ -354,6 +355,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12288}
     - Class: 114
+      Script: {instanceID: 12326}
+    - Class: 114
       Script: {instanceID: 12370}
     - Class: 114
       Script: {instanceID: 12414}
@@ -488,6 +491,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12214}
     - Class: 114
       Script: {instanceID: 12282}
+    - Class: 114
+      Script: {instanceID: 12326}
     - Class: 114
       Script: {instanceID: 12332}
     - Class: 114
@@ -826,6 +831,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12414}
     - Class: 114
+      Script: {instanceID: 12418}
+    - Class: 114
       Script: {instanceID: 12430}
     - Class: 114
       Script: {instanceID: 12510}
@@ -853,8 +860,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13218}
     - Class: 114
       Script: {instanceID: 13232}
-    - Class: 114
-      Script: {instanceID: 13274}
     - Class: 114
       Script: {instanceID: 13346}
     - Class: 114
@@ -1665,7 +1670,7 @@ ScriptsOnlyBuild:
     className: CinemachineVirtualCamera
   - hash:
       serializedVersion: 2
-      Hash: b27d88d866c4cd7521e99fe2f4c0a3e1
+      Hash: 84f6f1bf74031eae2df13f9c8d33c362
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player

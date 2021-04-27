@@ -9,8 +9,10 @@ public class Player : MonoBehaviour
     public int lives;
     public bool hasIngredients;
     public AudioSource footsteps;
-    //public Image cutscene;
-    //public Button button;
+    public Image cutscene;
+    public Button button;
+    public Image endScene;
+    public Button quitButton;
 
     // Start is called before the first frame update
     void Start()
@@ -22,42 +24,64 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
             if (!footsteps.isPlaying)
             {
                 footsteps.Play();
             }
-        } else
+        }
+        else
         {
             footsteps.Stop();
         }
 
         if (lives <= 0)
         {
+            cutscene.gameObject.SetActive(true);
+            button.gameObject.SetActive(true);
 
-            Scene scene = SceneManager.GetActiveScene();
-            if (scene.name == "DarkForest" && gameObject.name == "ForestCharacter")
-            {
-                DontDestroyOnLoad(gameObject);
-            }
-            if (scene.name == "Field" && gameObject.name == "DarkForestCharacter")
-            {
-                DontDestroyOnLoad(gameObject);
-            }
-            SceneManager.LoadScene(scene.name);
-
-            //if (scene.name == "Forest")
+            //Scene scene = SceneManager.GetActiveScene();
+            //if (scene.name == "DarkForest" && gameObject.name == "ForestCharacter")
             //{
-            //    cutscene.gameObject.SetActive(true);
-            //    button.gameObject.SetActive(true);
+            //    DontDestroyOnLoad(gameObject);
+            //}
+            //if (scene.name == "Field" && gameObject.name == "DarkForestCharacter")
+            //{
+            //    DontDestroyOnLoad(gameObject);
             //}
 
+            //SceneManager.LoadScene(scene.name);
+
+            //cutscene.gameObject.SetActive(true);
+            //button.gameObject.SetActive(true);
+
+        }
+
+        if (hasIngredients)
+        {
+            endScene.gameObject.SetActive(true);
+            quitButton.gameObject.SetActive(true);
         }
     }
 
     public void gotIngredients()
     {
         hasIngredients = true;
+    }
+
+    public void reloadScene()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "DarkForest" && gameObject.name == "ForestCharacter")
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+        if (scene.name == "Field" && gameObject.name == "DarkForestCharacter")
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+
+        SceneManager.LoadScene(scene.name);
     }
 }
