@@ -17,10 +17,14 @@ public class ForestStart : MonoBehaviour
         Debug.Log("Village boi: " + character);
         if (character != null)
         {
+            character.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            Vector3 pos = character.transform.position;
+            pos.y = 4;
+            character.transform.position = pos;
             oldKnife = knife.GetComponent<ThrowingKnife>();
             Debug.Log("knife??: " + oldKnife);
             newKnife.knives = oldKnife.knives;
-            character.SetActive(false);
+            //character.SetActive(false);
             Debug.Log("knives from last scene: " + newKnife.knives);
         }
     }

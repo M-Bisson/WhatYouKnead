@@ -89,7 +89,7 @@ public class Inventory : MonoBehaviour
         //    }
         //}
 
-        if (honeycombs == 1 && !hasHoneycomb)
+        if (honeycombs == 1)
         {
             foreach (Transform child in inventoryPanel.transform)
             {
@@ -102,7 +102,7 @@ public class Inventory : MonoBehaviour
             }
         }
 
-        if (berries == 1 && !hasBerry)
+        if (berries == 1)
         {
             foreach (Transform child in inventoryPanel.transform)
             {
@@ -115,7 +115,7 @@ public class Inventory : MonoBehaviour
             }
         }
 
-        if (wheat == 1 && !hasWheat)
+        if (wheat == 1)
         {
             foreach (Transform child in inventoryPanel.transform)
             {

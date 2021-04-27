@@ -86,6 +86,10 @@ public class Player : MonoBehaviour
     public void reloadScene()
     {
         Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "Forest" && gameObject.name == "VillageCharacter")
+        {
+            DontDestroyOnLoad(gameObject);
+        }
         if (scene.name == "DarkForest" && gameObject.name == "ForestCharacter")
         {
             DontDestroyOnLoad(gameObject);

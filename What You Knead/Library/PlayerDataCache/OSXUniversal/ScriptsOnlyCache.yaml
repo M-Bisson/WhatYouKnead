@@ -1400,7 +1400,7 @@ ScriptsOnlyBuild:
     className: ThrowingKnife
   - hash:
       serializedVersion: 2
-      Hash: f8fe01872e7faebd742b1ab5a8ae5440
+      Hash: 80a9ce94a52ddce6d4ea3d9c3801bcc3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EndScene
@@ -1670,7 +1670,7 @@ ScriptsOnlyBuild:
     className: CinemachineVirtualCamera
   - hash:
       serializedVersion: 2
-      Hash: 84f6f1bf74031eae2df13f9c8d33c362
+      Hash: ff5dcf2f4eb95888ad61ea2b59393ed5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player

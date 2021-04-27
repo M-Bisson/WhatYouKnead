@@ -94726,7 +94726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e996cd277032b7840880ba8e888a6a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knives: 9
+  knives: 0
   throwSpeed: 10
   character: {fileID: 294058509}
   knifeTemplate: {fileID: 1072011469}
