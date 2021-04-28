@@ -44,6 +44,12 @@ public class GameStarter : MonoBehaviour
                 sound_menu.Play();
                 SceneManager.LoadScene("Menu");
             }
+        } else if (scene.name == "VillageEndScene") {
+            if (EventSystem.current.currentSelectedGameObject.name == "WinCreditsButton" ||
+                EventSystem.current.currentSelectedGameObject.name == "LoseCreditsButton")
+            {
+                SceneManager.LoadScene("Credits");
+            }
         }
     }
 }

@@ -9,6 +9,8 @@ public class EndScene : MonoBehaviour
     public Image lose;
     public Button winButton;
     public Button loseButton;
+    public Button winCreditsButton;
+    public Button loseCreditsButton;
     private GameObject character;
 
     void Awake()
@@ -24,10 +26,12 @@ public class EndScene : MonoBehaviour
         {
             lose.enabled = false;
             loseButton.gameObject.SetActive(false);
+            loseCreditsButton.gameObject.SetActive(false);
         } else
         {
             win.enabled = false;
             winButton.gameObject.SetActive(false);
+            winCreditsButton.gameObject.SetActive(false);
         }
 
     }
