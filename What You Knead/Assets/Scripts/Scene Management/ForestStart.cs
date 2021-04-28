@@ -9,10 +9,12 @@ public class ForestStart : MonoBehaviour
     public GameObject forestCharacter;
     public ThrowingKnife newKnife;
     private ThrowingKnife oldKnife;
+    public GameObject inventoryPan;
     // Start is called before the first frame update
     void Start()
     {
         character = GameObject.Find("VillageCharacter");
+        character.GetComponent<Inventory>().inventoryPanel = inventoryPan;
         knife = character.transform.Find("throwing knife");
         Debug.Log("Village boi: " + character);
         if (character != null)
@@ -26,6 +28,7 @@ public class ForestStart : MonoBehaviour
             newKnife.knives = oldKnife.knives;
             //character.SetActive(false);
             Debug.Log("knives from last scene: " + newKnife.knives);
+            knife.GetComponent<ThrowingKnife>().enabled = (false);
         }
     }
 

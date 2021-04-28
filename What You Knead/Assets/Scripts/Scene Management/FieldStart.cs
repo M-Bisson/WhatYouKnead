@@ -16,9 +16,12 @@ public class FieldStart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //GameObject oldChar = GameObject.Find("DarkForestCharacter");
-        //oldChar.SetActive(false);
-        //Debug.Log("Forest character deleted");
+        GameObject oldChar = GameObject.Find("ForestCharacter");
+        if (oldChar != null)
+        {
+            oldChar.SetActive(false);
+            Debug.Log("Forest character deleted");
+        }
         character = GameObject.Find("DarkForestCharacter");
         character.GetComponent<Inventory>().inventoryPanel = inventoryPan;
         Debug.Log("DarkForest inventory fixed");

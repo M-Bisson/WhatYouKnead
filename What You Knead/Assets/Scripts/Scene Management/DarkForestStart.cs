@@ -12,9 +12,16 @@ public class DarkForestStart : MonoBehaviour
     public Inventory newInventory;
     private Inventory oldInventory;
     public GameObject inventoryPan;
+    private GameObject oldChar;
     // Start is called before the first frame update
     void Start()
     {
+        oldChar = GameObject.Find("VillageCharacter");
+        if (oldChar != null)
+        {
+            oldChar.SetActive(false);
+            Debug.Log("Village character deleted");
+        }
         character = GameObject.Find("ForestCharacter");
         knife = character.transform.Find("throwing knife");
         Debug.Log("Forest boi: " + character);
@@ -34,6 +41,7 @@ public class DarkForestStart : MonoBehaviour
             //---------------------------
             newInventory.honeycombs = oldInventory.honeycombs;
             Debug.Log("honeycombs from last scene: " + newInventory.honeycombs);
+            knife.GetComponent<ThrowingKnife>().enabled = (false);
         }
     }
 }

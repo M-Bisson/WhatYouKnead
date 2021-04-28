@@ -40831,7 +40831,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.23307309, y: -0.07204824, z: 0.01731844, w: 0.9696319}
+  m_LocalRotation: {x: 0.23307306, y: -0.07204821, z: 0.017318403, w: 0.9696319}
   m_LocalPosition: {x: -0.10854806, y: -0.05439949, z: 0.71665716}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -59760,6 +59760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forestCharacter: {fileID: 294058505}
   newKnife: {fileID: 1959801425}
+  inventoryPan: {fileID: 1859419220}
 --- !u!1001 &1331125014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66618,7 +66619,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399427693}
-  m_LocalRotation: {x: 0.23371562, y: 0.0000078082085, z: -0.0000018775463, w: 0.97230506}
+  m_LocalRotation: {x: 0.23371561, y: 0.000007897615, z: -0.0000019147992, w: 0.97230506}
   m_LocalPosition: {x: -0.0002469169, y: 17.000008, z: -16.109983}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
