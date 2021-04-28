@@ -91,41 +91,50 @@ public class Inventory : MonoBehaviour
 
         if (honeycombs == 1)
         {
+            hasHoneycomb = true;
             foreach (Transform child in inventoryPanel.transform)
             {
                 //if item already in inventory
                 if (child.gameObject.tag == "honeycomb")
                 {
                     child.Find("Text").GetComponent<Text>().text = "1";
-                    hasHoneycomb = true;
                 }
             }
+        } else if (honeycombs == 0)
+        {
+            hasHoneycomb = false;
         }
 
         if (berries == 1)
         {
+            hasBerry = true;
             foreach (Transform child in inventoryPanel.transform)
             {
                 //if item already in inventory
                 if (child.gameObject.tag == "berry")
                 {
                     child.Find("Text").GetComponent<Text>().text = "1";
-                    hasBerry = true;
                 }
             }
+        } else if (berries == 0)
+        {
+            hasBerry = false;
         }
 
         if (wheat == 1)
         {
+            hasWheat = true;
             foreach (Transform child in inventoryPanel.transform)
             {
                 //if item already in inventory
                 if (child.gameObject.tag == "wheat")
                 {
                     child.Find("Text").GetComponent<Text>().text = "1";
-                    hasWheat = true;
                 }
             }
+        } else if (wheat == 0)
+        {
+            hasWheat = false;
         }
 
         if(hasBerry && hasHoneycomb && hasWheat)
@@ -134,12 +143,5 @@ public class Inventory : MonoBehaviour
         }
 
     }
-
-
-    void OnCollisionEnter(Collision c)
-    {
-
-    }
-
 
 }
