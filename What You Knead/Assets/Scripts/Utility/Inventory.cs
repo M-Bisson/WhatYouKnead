@@ -51,43 +51,19 @@ public class Inventory : MonoBehaviour
                     child.Find("Text").GetComponent<Text>().text = "" + knives;
                 }
             }
+        } else if (knives == 0)
+        {
+            hasKnife = false;
+
+            foreach (Transform child in inventoryPanel.transform)
+            {
+                //if item already in inventory
+                if (child.gameObject.tag == "knife")
+                {
+                    child.Find("Text").GetComponent<Text>().text = "" + knives;
+                }
+            }
         }
-        //else if (knives >= 1 && hasKnife)
-        //{
-        //    foreach (Transform child in inventoryPanel.transform)
-        //    {
-        //        //if item already in inventory
-        //        if (child.gameObject.tag == "knife")
-        //        {
-        //            child.Find("Text").GetComponent<Text>().text = "" + knives;
-        //        }
-        //    }
-        //}
-        //else if (knives < 1)
-        //{
-        //    foreach (Transform child in inventoryPanel.transform)
-        //    {
-        //        //if item already in inventory
-        //        if (child.gameObject.tag == "knife")
-        //        {
-        //            child.Find("Text").GetComponent<Text>().text = "" + knives;
-        //        }
-        //    }
-        //}
-        //if (knives != knife.knives)
-        //{
-        //    foreach (Transform child in inventoryPanel.transform)
-        //    {
-        //        //if item already in inventory
-        //        if (child.gameObject.tag == "knife")
-        //        {
-        //            child.Find("Text").GetComponent<Text>().text = "" + knife.knives;
-        //            knives = knife.knives;
-        //            hasKnife = true;
-        //            return;
-        //        }
-        //    }
-        //}
 
         if (honeycombs == 1)
         {
@@ -103,6 +79,14 @@ public class Inventory : MonoBehaviour
         } else if (honeycombs == 0)
         {
             hasHoneycomb = false;
+            foreach (Transform child in inventoryPanel.transform)
+            {
+                //if item already in inventory
+                if (child.gameObject.tag == "honeycomb")
+                {
+                    child.Find("Text").GetComponent<Text>().text = "0";
+                }
+            }
         }
 
         if (berries == 1)
@@ -119,6 +103,14 @@ public class Inventory : MonoBehaviour
         } else if (berries == 0)
         {
             hasBerry = false;
+            foreach (Transform child in inventoryPanel.transform)
+            {
+                //if item already in inventory
+                if (child.gameObject.tag == "berry")
+                {
+                    child.Find("Text").GetComponent<Text>().text = "0";
+                }
+            }
         }
 
         if (wheat == 1)
@@ -135,6 +127,14 @@ public class Inventory : MonoBehaviour
         } else if (wheat == 0)
         {
             hasWheat = false;
+            foreach (Transform child in inventoryPanel.transform)
+            {
+                //if item already in inventory
+                if (child.gameObject.tag == "wheat")
+                {
+                    child.Find("Text").GetComponent<Text>().text = "0";
+                }
+            }
         }
 
         if(hasBerry && hasHoneycomb && hasWheat)

@@ -7,10 +7,12 @@ public class SpawnBears : MonoBehaviour
     public GameObject[] bears = new GameObject[5];
     public GameObject berry;
     public Inventory inventory;
+    private bool triggered;
 
     // Start is called before the first frame update
     void Start()
     {
+        triggered = false;
         foreach (GameObject bear in bears)
         {
             bear.SetActive(false);
@@ -19,28 +21,33 @@ public class SpawnBears : MonoBehaviour
 
     void OnTriggerEnter()
     {
-        foreach (GameObject bear in bears)
+        if (!triggered)
         {
-            bear.SetActive(true);
+            foreach (GameObject bear in bears)
+            {
+                bear.SetActive(true);
+            }
         }
+        triggered = true;
     }
 
     void Update()
     {
-        foreach (GameObject bear in bears)
+        if (triggered)
         {
-            if (bear.activeSelf)
+            foreach (GameObject bear in bears)
             {
-                break;
+                if (bear.activeSelf)
+                {
+                    break;
+                }
+                else
+                {
+                    berry.SetActive(true);
+                    gameObject.SetActive(false);
+                }
+
             }
-            if (!Inventory.hasBerry)
-            {
-                berry.SetActive(true);
-            } else
-            {
-                berry.SetActive(false);
-            }
-            
         }
     }
 }
