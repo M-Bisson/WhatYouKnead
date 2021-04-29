@@ -130,6 +130,58 @@ Manifest:
 			strawberry.fbx
 		Script:
 			AnimateNearPlayer.cs
+	Daniela Hammami: Audio
+		Assets:
+			bear_hurt.mp3
+			bear_hurt2.mp3
+			bearsound1.mp3
+			bearsound2.mp3
+			bearsound3.mp3
+			bee.mp3
+			bug1.mp3
+			bug2.mp3	
+			bug3.mp3
+			bug4.mp3
+			bug5.mp3
+			bug6.mp3
+			CakeTown 1.mp3
+			cathurt1.mp3
+			cathurt2.mp3
+			chest.mp3
+			dark_ambient.mp3
+			darkforest.mp3
+			door_open.mp3	
+			enemy_hit.mp3
+			food_pickup.mp3
+			footstep1.mp3
+			footstep2.mp3
+			Forest 03.mp3
+			Forest_Stage.mp3
+			game_start.mp3
+			grasshoppa.mp3
+			item_pickup.mp3
+			Jingle_Achievement_01.mp3
+			killbug.mp3
+			knife_throw.mp3
+			leaves.mp3
+			menu_select.mp3
+			Outdoor_Ambience.mp3
+			rockfall1.mp3
+			rockfall2.mp3
+			spooky river.mp3
+			stream1.mp3
+			tree surprise 2.mp3
+			treefall.mp3
+			treefall2.mp3
+			Viktor Kraus - Blueberries.mp3
+		Script:
+			BeeAudio.cs
+			ChestOpen.cs (audio)
+			EnemyInteraction.cs (audio)
+			FallingTreeAudio.cs
+			HoneycombInteraction.cd (audio)
+			KnifeInteraction.cs (audio)
+			LeafAudio.cs
 	Marissa Yun: Programming UI/game mechanics for pickup interaction, sprite creation for pickup UI prefabs, rotation fix for door prefab
 		Assets:
 			Knife.prefab
