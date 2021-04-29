@@ -100,7 +100,7 @@ Manifest:
 			EnemyInteraction.cs
 			EnemyKnifeCollision.cs
 			KnifeInteraction.cs
-			Player.cs			
+			Player.cs
 			SpawnBears.cs
 			SpawnBees.cs
 			SpawnGrasshoppers.cs
@@ -116,7 +116,7 @@ Manifest:
 			LoadForest.cs
 			LoadVillageStage.cs
 			CameraRotation.cs
-			FollowMouse.cs			
+			FollowMouse.cs
 
 	Anna Ho: Modeling for flower field assets. Creating/programming the Menu/HowToPlay/Pause UI.
 		Assets:
@@ -153,7 +153,7 @@ Manifest:
 			bearsound3.mp3
 			bee.mp3
 			bug1.mp3
-			bug2.mp3	
+			bug2.mp3
 			bug3.mp3
 			bug4.mp3
 			bug5.mp3
@@ -164,7 +164,7 @@ Manifest:
 			chest.mp3
 			dark_ambient.mp3
 			darkforest.mp3
-			door_open.mp3	
+			door_open.mp3
 			enemy_hit.mp3
 			food_pickup.mp3
 			footstep1.mp3
@@ -196,16 +196,35 @@ Manifest:
 			HoneycombInteraction.cd (audio)
 			KnifeInteraction.cs (audio)
 			LeafAudio.cs
-	Marissa Yun: Programming UI/game mechanics for pickup interaction, sprite creation for pickup UI prefabs, rotation fix for door prefab
+	Marissa Yun: Programming UI/game mechanics for pickup interaction and lives, sprite creation for pickup UI and lives prefabs, rotation fix for door prefab, programming the cutscenes and end scenes UI
 		Assets:
 			Knife.prefab
 			Wheat.prefab
 			Honeycomb.prefab
 			Berry.prefab
-			Village.unity (InventoryPanel)
+			Life.prefab
+			LifeCount.prefab
+
 		Script:
+			Authored:
 			Inventory.cs
-			Door.cs (rotation fix, not author)
+			HoneycombInteration.cs
+			BerryInteraction.cs
+			WheatInteraction.cs
+			CellScaling.cs
+			Lives.cs
+
+			Not authored but made changes/fixes:
+			Door.cs
+			DarkForestStart.cs
+			FieldStart.cs
+			ForestStart.cs
+			KnifeInteraction.cs
+			Player.cs
+			SpawnBears.cs
+			SpawnBees.cs
+			SpawnGrasshoppers.cs
+
 	Jenny Zhou: Modeling, Basic Animation, NPC AI, Concept Art
 		Assets:
 			Models:
