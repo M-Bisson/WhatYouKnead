@@ -13,6 +13,12 @@ public class npcScript : MonoBehaviour
     private int currWaypoint;
     private int counter;
 
+    public GameObject NPC;
+    public GameObject Player;
+
+    public Canvas dialogueBox;
+    public GameObject button;
+
     private void setNextWaypoint()
     {
         if (waypoints.Length == 0)
@@ -46,6 +52,20 @@ public class npcScript : MonoBehaviour
         if (navMeshAgent.pathPending != true && navMeshAgent.remainingDistance == 0)
         {
             setNextWaypoint();
+        }
+
+        if (Vector3.Distance(NPC.transform.position, Player.transform.position) < 0.2) {
+            dialogueBox.gameObject.SetActive(true);
+            button.gameObject.SetActive(true);
+        }
+    }
+
+    private void OnMouseOver()
+    {
+        // if player clicks on the npc, open dialogue box
+        if (Input.GetMouseButtonDown(0))
+        {
+            dialogueBox.gameObject.SetActive(true);
         }
     }
 }
