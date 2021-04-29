@@ -51,11 +51,13 @@ Known problem areas:
 
 Manifest:
 	Miranda Bisson: Modeling, Programming, Level Design, Animations
-		Files authored/assets implemented:
+	Files authored & edited/assets implemented:
+		Assets/Other:
 			Bear.controller
 			Bee.controller
 			Chest.controller
 			GrassHopper.controller
+			NPC.controller
 			knife cursor.png
 			bear.blend & .fbx (animation only)
 			bee.blend & .fbx (animation only)
@@ -70,6 +72,9 @@ Manifest:
 			stage.fbx
 			table.fbx
 			tree_3.fbx
+			rock.fbx
+			spiderweb.fbx
+			npc_cat.blend & .fbx (animation & coloring)
 			BearEnemy.prefab
 			Bee_Enemy.prefab
 			DarkFTree1.prefab
@@ -79,11 +84,15 @@ Manifest:
 			house_table.prefab
 			sized_tree.prefab
 			sized_tree_dark.prefab
+			rock.prefab
+			RollingRock.prefab
+		Scenes:
 			Village.unity (level design)
 			Forest.unity (level design)
 			DarkForest.unity (level design)
 			Field.unity (level design)
-			VillageEndScene (level design)
+			VillageEndScene.unity (initial design)
+		Scripts:
 			BearAI.cs
 			BeeAI.cs
 			GrasshopperAI.cs
@@ -91,9 +100,14 @@ Manifest:
 			EnemyInteraction.cs
 			EnemyKnifeCollision.cs
 			KnifeInteraction.cs
-			Player.cs
+			Player.cs			
+			SpawnBears.cs
 			SpawnBees.cs
+			SpawnGrasshoppers.cs
+			SpawnRocks.cs
 			ThrowingKnife.cs
+			TreeFall.cs
+			WaterInteraction.cs
 			DarkForestStart.cs
 			FieldStart.cs
 			ForestStart.cs
@@ -102,7 +116,7 @@ Manifest:
 			LoadForest.cs
 			LoadVillageStage.cs
 			CameraRotation.cs
-			FollowMouse.cs
+			FollowMouse.cs			
 
 	Anna Ho: Modeling for flower field assets. Creating/programming the Menu/HowToPlay/Pause UI.
 		Assets:
