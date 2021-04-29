@@ -225,11 +225,12 @@ Manifest:
 			SpawnBees.cs
 			SpawnGrasshoppers.cs
 
-	Jenny Zhou: Modeling, Basic Animation, NPC AI, Concept Art
+	Jenny Zhou: Modeling, Basic Animation, NPC AI, Concept Art, NPC Interactions, NPC Dialogue
 		Assets:
 			Models:
 				catPlayer.blend and fbx (not added to scenes yet)
-				npc_cat.blend and fbx (animation not added to scenes yet but is in the .blend)
+				npc_cat.blend and fbx
+				bush.blend and fbx (in the forest and dark forest)
 			Textures:
 				Box texture for NPC waypoints (not added to the scene yet)
 				2D texture for Player model's face (not added to the scene yet but in the .blend)
@@ -240,6 +241,8 @@ Manifest:
 				Dark forest concept art
 		Script:
 			npcScript.cs
+			dialogueButton.cs
+			stationaryNPCScript.cs
 
 
 
