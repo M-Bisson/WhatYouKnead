@@ -7064,7 +7064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68120bd808661124a9fab8071e67b9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
+  agent: {fileID: 268148004}
   animator: {fileID: 581376642}
   character: {fileID: 306703128}
 --- !u!195 &268148004
