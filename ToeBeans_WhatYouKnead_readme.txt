@@ -139,11 +139,25 @@ Manifest:
 			bear.blend & .fbx (model only)
 			bee.blend & .fbx (model only)
 			beehive.fbx
+			berry-bush.fbx
 			chef-knife.fbx
 			honeycomb.fbx (model and animation)
+			strawberry-lowpoly.fbx
 			strawberry.fbx
+			wheat.fbx
 		Script:
 			AnimateNearPlayer.cs
+		Images:
+			Bear.jpg
+			End_Lose.jpg
+			Bee.jpg
+			Intro.jpg
+			End_Win.jpg
+			Grasshopper.jpg
+			Intro_1.jpg
+			Intro_2.jpg
+			Intro_3.jpg
+		Trailer
 	Daniela Hammami: Audio
 		Assets:
 			bear_hurt.mp3
