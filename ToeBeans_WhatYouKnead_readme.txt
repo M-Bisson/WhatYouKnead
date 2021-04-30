@@ -1,8 +1,10 @@
+Team ToeBeans - Miranda Bisson (mbisson3@gatech.edu), Daniela Hammami (dhammami3@gatech.edu), Anna Ho (annaho@gatech.edu), Morgan Powers (mpowers42@gatech.edu), Marissa Yun (marissayun@gatech.edu), Jenny Zhou (jzhou379@gatech.edu)
+
 Start scene file: Menu.unity
 
 How to play:
 Controls
-	- WASD to move the character, space to jump (not currently needed for gameplay)
+	- WASD to move the character, space to jump, c to crouch
 	- mouse direction & WASD to change look/movement direction
 	- left click with mouse (knife cursor) to interact with pick-up-able items & open doors
 	- right click with mouse to throw knife in direction of knife cursor to defeat enemies
@@ -11,12 +13,11 @@ Stages
 	- character can only walk within predetermined boundaries in each stage area
 	- stage progression: Village->Forest->DarkForest->Field->Village(End)
 Rules
-	- enemies can be destroyed using the knives the player can find in the village and in the chests at the end of each stage (chests to be implemented)
+	- enemies can be destroyed using the knives the player can find in the village and in the chests at the end of each stage 
 	- the player has 5 lives, each time an enemy reaches the player (collides) they will lose a life
-	- currently, all lives lost resets player to the beginning (this might change to only reset them to the beginning of the current stage)
+	- all lives lost resets player to the beginning of the current stage
 Goal
 	- the goal is to travel through each stage, defeat the enemies, and collect the ingredients (honeycomb, berries, and wheat)
-		- currently, the honeycomb will appear after defeating the bees in the forest level, but the other ingredient assets have not been created and thus are not yet implemented
 Enemies
 	- each stage has enemies that will try to reach the player to attack them
 		- Forest: Bees
@@ -25,38 +26,42 @@ Enemies
 
 Requirements:
 	- Unity engine used
+	- Goals of the game communicated through cutscenes and cat NPC
 	- World and all assets 3D (and created by the team)
-	- Character controlled by player with WASD and mouse (controls & current animations from Unity Standard Assets for 2018.4, model created & rigged by our team)
+	- Character controlled by player with WASD, space, c, and mouse (controls & current animations from Unity Standard Assets for 2018.4, model created & rigged by our team)
 	- All enemies use Unity NavMeshAgent and player interaction with the enemy is the only way for the player to advance or lose(restart) the game
 	- Interaction with the environment is required to advance (opening doors in village to collect knives)
-		- interactions will be enhanced to provide a much more engaging scene for each stage once 3D assets are completed
 	- Game feel:
-		- audio for each stage is planned, audio clips to be found and implemented soon
-		- environmental polish to be implemented once final key interactions are complete
+		- audio for each stage/interaction
+		- environmental polish 
 			- particle system of falling leaves for trees
-			- potentially a day/night cycle
-			- more environmental assets for each stage (ex: spider webs in the Dark Forest)
+			- rivers
+			- falling trees
+			- rolling boulders
+			- environmental assets for each stage (ex: spider webs in the Dark Forest)
+		- ability to restart level after dying
 	- Choices for player
 		- choose to explore whole village (will get more knives) or follow path to next stage
 		- choose to fight or run away from enemies (will not collect ingredients & achieve goal if player does not fight)
 	- GUI
-		- start menu & pause menu implemented
-		- audio control to be implemented when audio added
-		- credits screen to be added soon
+		- start menu, pause menu, and credits screen implemented
+		- restart level or quit game using pause menu
 
 Known problem areas:
-	- Audio (audio files saved but not implemented yet)
-	- Player Camera (clips through walls)
-	- Environment (stages somewhat empty)
-	- UI Screens ('How To Play' button does not bring you to the HowToPlay Scene)
-
+	- NPC dialogue does not disappear if the player stands nearby the NPC even after clicking continue. 
+	- Character crouches in the Dark Forest in certain areas without player input. 
+	- Door opening sound is played even when doors that cannot open are clicked.
+	- Character can jump out of some houses from the tables. 
+	
 Manifest:
 	Miranda Bisson: Modeling, Programming, Level Design, Animations
-		Files authored/assets implemented:
+	Files authored & edited/assets implemented:
+		Assets/Other:
 			Bear.controller
 			Bee.controller
 			Chest.controller
 			GrassHopper.controller
+			NPC.controller
 			knife cursor.png
 			bear.blend & .fbx (animation only)
 			bee.blend & .fbx (animation only)
@@ -71,6 +76,9 @@ Manifest:
 			stage.fbx
 			table.fbx
 			tree_3.fbx
+			rock.fbx
+			spiderweb.fbx
+			npc_cat.blend & .fbx (animation & coloring)
 			BearEnemy.prefab
 			Bee_Enemy.prefab
 			DarkFTree1.prefab
@@ -80,11 +88,15 @@ Manifest:
 			house_table.prefab
 			sized_tree.prefab
 			sized_tree_dark.prefab
+			rock.prefab
+			RollingRock.prefab
+		Scenes:
 			Village.unity (level design)
 			Forest.unity (level design)
 			DarkForest.unity (level design)
 			Field.unity (level design)
-			VillageEndScene (level design)
+			VillageEndScene.unity (initial design)
+		Scripts:
 			BearAI.cs
 			BeeAI.cs
 			GrasshopperAI.cs
@@ -93,8 +105,13 @@ Manifest:
 			EnemyKnifeCollision.cs
 			KnifeInteraction.cs
 			Player.cs
+			SpawnBears.cs
 			SpawnBees.cs
+			SpawnGrasshoppers.cs
+			SpawnRocks.cs
 			ThrowingKnife.cs
+			TreeFall.cs
+			WaterInteraction.cs
 			DarkForestStart.cs
 			FieldStart.cs
 			ForestStart.cs
@@ -105,7 +122,7 @@ Manifest:
 			CameraRotation.cs
 			FollowMouse.cs
 
-	Anna Ho: Modeling for flower field assets. Creating/programming the Menu/HowToPlay/Pause UI.
+	Anna Ho: Modeling for flower field assets. Creating/programming the Menu/HowToPlay/Pause/Credits GUI. Art for the GUIs. Implemented some level design & jumping beetles for the flower field. 
 		Assets:
 			white_daisy.fbx
 			orange_daisy.prefab
@@ -114,51 +131,129 @@ Manifest:
 			red_daisy.prefab
 			white_daisy.prefab
 			yellow_daisy.prefab
-
+		Images for UI: 
+			Everything in /Assets/Images/UI/
 		Scripts:
 			GameQuitter.cs
 			GameStarter.cs
 			MouseLockNone.cs
 			PauseMenuToggle.cs
 			SceneStart.cs
+			HitWithImpulse.cs
+	
 	Morgan Powers: Modeling, Basic Animation
 		Assets:
 			bear.blend & .fbx (model only)
 			bee.blend & .fbx (model only)
 			beehive.fbx
+			berry-bush.fbx
 			chef-knife.fbx
 			honeycomb.fbx (model and animation)
+			strawberry-lowpoly.fbx
 			strawberry.fbx
+			wheat.fbx
 		Script:
 			AnimateNearPlayer.cs
-	Marissa Yun: Programming UI/game mechanics for pickup interaction, sprite creation for pickup UI prefabs, rotation fix for door prefab
+		Images:
+			Bear.jpg
+			End_Lose.jpg
+			Bee.jpg
+			Intro.jpg
+			End_Win.jpg
+			Grasshopper.jpg
+			Intro_1.jpg
+			Intro_2.jpg
+			Intro_3.jpg
+		Trailer
+	
+	Daniela Hammami: Audio
+		Assets:
+			bear_hurt.mp3
+			bear_hurt2.mp3
+			bearsound1.mp3
+			bearsound2.mp3
+			bearsound3.mp3
+			bee.mp3
+			bug1.mp3
+			bug2.mp3
+			bug3.mp3
+			bug4.mp3
+			bug5.mp3
+			bug6.mp3
+			CakeTown 1.mp3
+			cathurt1.mp3
+			cathurt2.mp3
+			chest.mp3
+			dark_ambient.mp3
+			darkforest.mp3
+			door_open.mp3
+			enemy_hit.mp3
+			food_pickup.mp3
+			footstep1.mp3
+			footstep2.mp3
+			Forest 03.mp3
+			Forest_Stage.mp3
+			game_start.mp3
+			grasshoppa.mp3
+			item_pickup.mp3
+			Jingle_Achievement_01.mp3
+			killbug.mp3
+			knife_throw.mp3
+			leaves.mp3
+			menu_select.mp3
+			Outdoor_Ambience.mp3
+			rockfall1.mp3
+			rockfall2.mp3
+			spooky river.mp3
+			stream1.mp3
+			tree surprise 2.mp3
+			treefall.mp3
+			treefall2.mp3
+			Viktor Kraus - Blueberries.mp3
+		Script:
+			BeeAudio.cs
+			ChestOpen.cs (audio)
+			EnemyInteraction.cs (audio)
+			FallingTreeAudio.cs
+			HoneycombInteraction.cd (audio)
+			KnifeInteraction.cs (audio)
+			LeafAudio.cs
+	
+	Marissa Yun: Programming UI/game mechanics for pickup interaction and lives, sprite creation for pickup UI and lives prefabs, rotation fix for door prefab, programming the cutscenes and end scenes UI
 		Assets:
 			Knife.prefab
 			Wheat.prefab
 			Honeycomb.prefab
 			Berry.prefab
-			Village.unity (InventoryPanel)
+			Life.prefab
+			LifeCount.prefab
+
 		Script:
+			Authored:
 			Inventory.cs
-			Door.cs (rotation fix, not author)
-	Daniela Hammami: Audio, Game Feel
-		Assets:
-			doorsound.mp3
-			grassfootsteps.mp3
-			knifethrow.mp3		
-		Script:
-			AudioManager.cs
-			Sound.cs
-			ThirdPersonCamera.cs
-			CameraCollision.cs
-			CameraCollision2.cs (not yet to be implemented)
-			
-			
-	Jenny Zhou: Modeling, Basic Animation, NPC AI, Concept Art
+			HoneycombInteration.cs
+			BerryInteraction.cs
+			WheatInteraction.cs
+			CellScaling.cs
+			Lives.cs
+
+			Not authored but made changes/fixes:
+			Door.cs
+			DarkForestStart.cs
+			FieldStart.cs
+			ForestStart.cs
+			KnifeInteraction.cs
+			Player.cs
+			SpawnBears.cs
+			SpawnBees.cs
+			SpawnGrasshoppers.cs
+
+	Jenny Zhou: Modeling, Basic Animation, NPC AI, Concept Art, NPC Interactions, NPC Dialogue
 		Assets:
 			Models:
 				catPlayer.blend and fbx (not added to scenes yet)
-				npc_cat.blend and fbx (animation not added to scenes yet but is in the .blend)
+				npc_cat.blend and fbx
+				bush.blend and fbx (in the forest and dark forest)
 			Textures:
 				Box texture for NPC waypoints (not added to the scene yet)
 				2D texture for Player model's face (not added to the scene yet but in the .blend)
@@ -169,6 +264,8 @@ Manifest:
 				Dark forest concept art
 		Script:
 			npcScript.cs
+			dialogueButton.cs
+			stationaryNPCScript.cs
 
 
 
