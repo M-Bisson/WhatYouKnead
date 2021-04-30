@@ -45,19 +45,18 @@ Requirements:
 		- credits screen to be added soon
 
 Known problem areas:
-	- Audio
-	- Player Camera
+	- Audio (audio files saved but not implemented yet)
+	- Player Camera (clips through walls)
 	- Environment (stages somewhat empty)
+	- UI Screens ('How To Play' button does not bring you to the HowToPlay Scene)
 
 Manifest:
 	Miranda Bisson: Modeling, Programming, Level Design, Animations
-	Files authored & edited/assets implemented:
-		Assets/Other:
+		Files authored/assets implemented:
 			Bear.controller
 			Bee.controller
 			Chest.controller
 			GrassHopper.controller
-			NPC.controller
 			knife cursor.png
 			bear.blend & .fbx (animation only)
 			bee.blend & .fbx (animation only)
@@ -72,9 +71,6 @@ Manifest:
 			stage.fbx
 			table.fbx
 			tree_3.fbx
-			rock.fbx
-			spiderweb.fbx
-			npc_cat.blend & .fbx (animation & coloring)
 			BearEnemy.prefab
 			Bee_Enemy.prefab
 			DarkFTree1.prefab
@@ -84,15 +80,11 @@ Manifest:
 			house_table.prefab
 			sized_tree.prefab
 			sized_tree_dark.prefab
-			rock.prefab
-			RollingRock.prefab
-		Scenes:
 			Village.unity (level design)
 			Forest.unity (level design)
 			DarkForest.unity (level design)
 			Field.unity (level design)
-			VillageEndScene.unity (initial design)
-		Scripts:
+			VillageEndScene (level design)
 			BearAI.cs
 			BeeAI.cs
 			GrasshopperAI.cs
@@ -101,13 +93,8 @@ Manifest:
 			EnemyKnifeCollision.cs
 			KnifeInteraction.cs
 			Player.cs
-			SpawnBears.cs
 			SpawnBees.cs
-			SpawnGrasshoppers.cs
-			SpawnRocks.cs
 			ThrowingKnife.cs
-			TreeFall.cs
-			WaterInteraction.cs
 			DarkForestStart.cs
 			FieldStart.cs
 			ForestStart.cs
@@ -139,112 +126,39 @@ Manifest:
 			bear.blend & .fbx (model only)
 			bee.blend & .fbx (model only)
 			beehive.fbx
-			berry-bush.fbx
 			chef-knife.fbx
 			honeycomb.fbx (model and animation)
-			strawberry-lowpoly.fbx
 			strawberry.fbx
-			wheat.fbx
 		Script:
 			AnimateNearPlayer.cs
-		Images:
-			Bear.jpg
-			End_Lose.jpg
-			Bee.jpg
-			Intro.jpg
-			End_Win.jpg
-			Grasshopper.jpg
-			Intro_1.jpg
-			Intro_2.jpg
-			Intro_3.jpg
-		Trailer
-	Daniela Hammami: Audio
-		Assets:
-			bear_hurt.mp3
-			bear_hurt2.mp3
-			bearsound1.mp3
-			bearsound2.mp3
-			bearsound3.mp3
-			bee.mp3
-			bug1.mp3
-			bug2.mp3
-			bug3.mp3
-			bug4.mp3
-			bug5.mp3
-			bug6.mp3
-			CakeTown 1.mp3
-			cathurt1.mp3
-			cathurt2.mp3
-			chest.mp3
-			dark_ambient.mp3
-			darkforest.mp3
-			door_open.mp3
-			enemy_hit.mp3
-			food_pickup.mp3
-			footstep1.mp3
-			footstep2.mp3
-			Forest 03.mp3
-			Forest_Stage.mp3
-			game_start.mp3
-			grasshoppa.mp3
-			item_pickup.mp3
-			Jingle_Achievement_01.mp3
-			killbug.mp3
-			knife_throw.mp3
-			leaves.mp3
-			menu_select.mp3
-			Outdoor_Ambience.mp3
-			rockfall1.mp3
-			rockfall2.mp3
-			spooky river.mp3
-			stream1.mp3
-			tree surprise 2.mp3
-			treefall.mp3
-			treefall2.mp3
-			Viktor Kraus - Blueberries.mp3
-		Script:
-			BeeAudio.cs
-			ChestOpen.cs (audio)
-			EnemyInteraction.cs (audio)
-			FallingTreeAudio.cs
-			HoneycombInteraction.cd (audio)
-			KnifeInteraction.cs (audio)
-			LeafAudio.cs
-	Marissa Yun: Programming UI/game mechanics for pickup interaction and lives, sprite creation for pickup UI and lives prefabs, rotation fix for door prefab, programming the cutscenes and end scenes UI
+	Marissa Yun: Programming UI/game mechanics for pickup interaction, sprite creation for pickup UI prefabs, rotation fix for door prefab
 		Assets:
 			Knife.prefab
 			Wheat.prefab
 			Honeycomb.prefab
 			Berry.prefab
-			Life.prefab
-			LifeCount.prefab
-
+			Village.unity (InventoryPanel)
 		Script:
-			Authored:
 			Inventory.cs
-			HoneycombInteration.cs
-			BerryInteraction.cs
-			WheatInteraction.cs
-			CellScaling.cs
-			Lives.cs
-
-			Not authored but made changes/fixes:
-			Door.cs
-			DarkForestStart.cs
-			FieldStart.cs
-			ForestStart.cs
-			KnifeInteraction.cs
-			Player.cs
-			SpawnBears.cs
-			SpawnBees.cs
-			SpawnGrasshoppers.cs
-
-	Jenny Zhou: Modeling, Basic Animation, NPC AI, Concept Art, NPC Interactions, NPC Dialogue
+			Door.cs (rotation fix, not author)
+	Daniela Hammami: Audio, Game Feel
+		Assets:
+			doorsound.mp3
+			grassfootsteps.mp3
+			knifethrow.mp3		
+		Script:
+			AudioManager.cs
+			Sound.cs
+			ThirdPersonCamera.cs
+			CameraCollision.cs
+			CameraCollision2.cs (not yet to be implemented)
+			
+			
+	Jenny Zhou: Modeling, Basic Animation, NPC AI, Concept Art
 		Assets:
 			Models:
 				catPlayer.blend and fbx (not added to scenes yet)
-				npc_cat.blend and fbx
-				bush.blend and fbx (in the forest and dark forest)
+				npc_cat.blend and fbx (animation not added to scenes yet but is in the .blend)
 			Textures:
 				Box texture for NPC waypoints (not added to the scene yet)
 				2D texture for Player model's face (not added to the scene yet but in the .blend)
@@ -255,8 +169,6 @@ Manifest:
 				Dark forest concept art
 		Script:
 			npcScript.cs
-			dialogueButton.cs
-			stationaryNPCScript.cs
 
 
 
